@@ -1,0 +1,30 @@
+/* global custom properties */
+:root {
+  --primary-text-color: #333;
+  --inverse-text-color: #fff;
+  --primary-background-color: ;
+  --secondary-background-color: ;
+}
+
+/* global utility classes */
+.flex--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* global element styles */
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

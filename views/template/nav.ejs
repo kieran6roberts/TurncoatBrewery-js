@@ -1,0 +1,69 @@
+<nav class="nav">
+  <h3 class="nav__title">
+    <a href="/" class="nav__title-link">
+      Beer<span class="nav__title-link--color"> Brewing Co.</span>
+    </a>
+  </h3>
+  <ul class="nav__list spread">
+    <li class="nav__item">
+      <% if (pageTitle === "home") { %>
+          <a href="/" class="nav__link active">
+            Home
+          </a>
+          <% } else { %>
+            <a href="/" class="nav__link">
+              Home
+            </a>
+          <% } %>
+    </li>
+    <li class="nav__item">
+      <% if (pageTitle === "story") { %>
+          <a href="/our-story" class="nav__link active">
+            Our Story
+          </a>
+          <% } else { %>
+            <a href="/our-story" class="nav__link">
+              Our Story
+            </a>
+          <% } %>
+    </li>
+    <li class="nav__item">
+      <% if (pageTitle === "beers") { %>
+          <a href="/beers" class="nav__link active">
+            Beers
+          </a>
+          <% } else { %>
+            <a href="/beers" class="nav__link">
+              Beers
+            </a>
+          <% } %>
+    </li>
+    <li class="nav__item">
+      <% if (pageTitle === "contact") { %>
+          <a href="/contact" class="nav__link active">
+            Contact
+          </a>
+          <% } else { %>
+            <a href="/contact" class="nav__link">
+              Contact
+            </a>
+          <% } %>
+    </li>
+    <li class="nav__item">
+      <% if (pageTitle === "shop") { %>
+          <a href="/shop" class="nav__link active">
+            <i class="fas fa-shopping-cart"></i>
+            Shop
+          </a>
+          <% } else { %>
+            <a href="/shop" class="nav__link">
+              <i class="fas fa-shopping-cart"></i>
+              Shop
+            </a>
+          <% } %>
+    </li>
+  </ul>
+  <div class="nav__burger nav__burger-js flex--center">
+    <div class="nav__burger-middle"></div>
+  </div>
+</nav>

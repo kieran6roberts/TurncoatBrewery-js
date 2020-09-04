@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/styles/home.css">
+  <%- include ("../template/head") %>
+</head>
+<body>
+  <%- include ("../template/nav") %>
+  <%- include ("../template/abstractedMobileLinks") %>
+  <%- include ("../template/sidebar") %>
+
+  <div class="modal modal-js"></div>
+
+  <main>
+    <section class="landing">
+      <div class="landing__hero spread">
+        <div class="landing__hero-background"></div>
+        <h1 class="landing__header">
+          Come and explore our brand new range of delicious beers
+        </h1>
+      </div>
+
+      <div class="landing__wrapper flow spread">
+          <div class="landing__cta">
+            <div class="landing__cta-socials">
+              <h5 class="landing__cta-text">Follow us here:</h5>
+              <a href="/our-story" class="landing__social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="/our-story" class="landing__social-link">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="/our-story" class="landing__social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="/our-story" class="landing__social-link">
+                <i class="fab fa-untappd"></i>
+              </a>
+            </div>
+              <div class="landing__cta-btns">
+                <a href="/our-story" class="landing__link cta--primary">
+                  Our Story
+                </a>
+                <a href="/beers" class="landing__link cta--secondary">
+                  Our Brews
+                </a>
+              </div>
+          </div>
+
+          <h2 class="landing__welcome">Welcome To <br>
+            <span class="landing__welcome--lrg">Beer Brewing Co.</span>
+          </h2>
+          <p class="landing__description">
+              the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+              It has survived not only five centuries.
+          </p>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="products__image"></div>
+      <div class="products__wrapper flow">
+        <h2 class="products__header">
+          We think our beer is great. Check it out below!
+        </h2>
+        <div class="products__logo logo--top">
+          <a href="/beers" class="products__link">
+            <h4 class="products__logo-title">the palest</h4>
+            <div class="products__logo-img">
+              <img src="/images/beach.png" alt="beach landscape">
+            </div>
+            <h5 class="products__logo-desc">
+              pale ale <br>
+              5%
+            </h5>
+          </a>
+        </div>
+        <div class="products__logo logo--middle">
+          <a href="/beers" class="products__link">
+            <h4 class="products__logo-title">iris burn</h4>
+            <div class="products__logo-img">
+              <img src="/images/mountains.png" alt="snowy mountainous landscape">
+            </div>
+            <h5 class="products__logo-desc">
+              ipa <br>
+              6.3%
+            </h5>
+          </a>
+        </div>
+        <div class="products__logo logo--bottom">
+          <a href="/beers" class="products__link">
+            <h4 class="products__logo-title">beekeeper's brew</h4>
+            <div class="products__logo-img">
+              <img src="/images/mountain.png" alt="mountainous landcape at night">
+            </div>
+            <h5 class="products__logo-desc">
+              honey stout <br>
+              9%
+            </h5>
+          </a>
+        </div>
+  
+      </div>
+    </section>
+  </main>
+  <%- include ("../template/footer") %>
+  
+</body>
+</html>

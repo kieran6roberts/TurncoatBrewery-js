@@ -1,0 +1,114 @@
+.landing {
+  width: 100%;
+  color: var(--text-light);
+}
+
+.landing__hero {
+  position: relative;
+}
+
+.landing__hero-background {
+  height: 65vh;
+  width: 100%;
+  background: 
+  url("../images/hero.jpg") center center/cover no-repeat,
+  linear-gradient(var(--primary-color), var(--secondary-color));
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+}
+
+.landing__header {
+  position: absolute;
+  bottom: 0;
+  font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
+  max-width: 490px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.landing__cta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing__cta-btns {
+  display: flex;
+  text-align: center;
+}
+
+.landing__cta-socials {
+  display: none;
+}
+
+.landing__link {
+  display: block;
+  width: 8rem;
+  background-color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 250ms ease,
+              transform 250ms ease;
+}
+
+.landing__welcome {
+  font-size: clamp(1.4rem, 3vw + 0.6rem, 2.4rem);
+  text-align: center;
+}
+
+.landing__welcome--lrg {
+  font-size: 2.8em;
+}
+
+.landing__description {
+  background-color: #192630;
+  margin: 0 2rem;
+  border-radius: 0.4rem;
+}
+
+.cta--primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.cta--secondary {
+  margin-left: 2rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.cta--primary:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+.cta--secondary:hover {
+  background-color: var(--secondary-hover);
+  transform: scale(1.05);
+}
+
+.landing__description {
+  text-align: center;
+  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
+}
+
+/* beer core range styling */
+.products__image {
+  background: linear-gradient(to bottom, var(--primary-color) 30%, var(--secondary-color) 100%);
+  opacity: 0.9;
+  height: 50vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
+}
+
+.products__wrapper{
+  position: relative;
+  padding: 0 2rem;
+}
+
+.products__header {
+  font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
+  color: var(--text-light);
+  max-width: 420px;
+  position: absolute;
+  top: -14rem;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/styles/beers.css">
+  <%- include ("../template/head") %>
+</head>
+<body>
+  <%- include ("../template/nav") %>
+  <%- include ("../template/abstractedMobileLinks") %>
+  <%- include ("../template/sidebar") %>
+  
+  <div class="products__logo logo--top">
+    <a href="/beers" class="products__link">
+      <h4 class="products__logo-title">the palest</h4>
+      <div class="products__logo-img">
+        <img src="/images/beach.png" alt="beach landscape">
+      </div>
+      <h5 class="products__logo-desc">
+        pale ale <br>
+        5%
+      </h5>
+    </a>
+  </div>
+  <div class="products__logo logo--middle">
+    <a href="/beers" class="products__link">
+      <h4 class="products__logo-title">iris burn</h4>
+      <div class="products__logo-img">
+        <img src="/images/mountains.png" alt="snowy mountainous landscape">
+      </div>
+      <h5 class="products__logo-desc">
+        ipa <br>
+        6.3%
+      </h5>
+    </a>
+  </div>
+  <div class="products__logo logo--bottom">
+    <a href="/beers" class="products__link">
+      <h4 class="products__logo-title">beekeeper's brew</h4>
+      <div class="products__logo-img">
+        <img src="/images/mountain.png" alt="mountainous landcape at night">
+      </div>
+      <h5 class="products__logo-desc">
+        honey stout <br>
+        9%
+      </h5>
+    </a>
+  </div>
+  <%- include ("../template/footer") %>
+  
+</body>
+</html>

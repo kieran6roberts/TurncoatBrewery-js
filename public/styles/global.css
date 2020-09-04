@@ -1,9 +1,28 @@
 /* global custom properties */
 :root {
-  --primary-text-color: #333;
-  --inverse-text-color: #fff;
-  --primary-background-color: ;
-  --secondary-background-color: ;
+  --primary-color: #fff9bf;
+  --secondary-color: #ff3814;
+  --accent-color: #152028;
+
+  --primary-hover: #f2e1b1;
+  --secondary-hover: #df2f10;
+  
+  --text-dark: #2e2d2d;
+  --text-light: #fff;
+
+  --transition-short: all 0.2s ease;
+  --transition-long: all 0.6s ease;
+
+  --primary-font: 'Poppins', sans-serif;
+  --font-size-xxxl: 4rem;
+  --font-size-xxl: 3.4rem;
+  --font-size-xl : 2.4rem;
+  --font-size-lrg: 1.9rem;
+  --font-size-md: 1.5rem;
+  --font-size-sm: 1rem;
+  --font-size-xs: 0.8rem;
+
+  --border-rad: 0.4rem;
 }
 
 /* global utility classes */
@@ -13,18 +32,430 @@
   align-items: center;
 }
 
-/* global element styles */
+.margin--right {
+  margin-right: auto;
+}
 
+.active {
+  color: var(--primary-color) !important;
+}
+
+.flow > * {
+  margin-bottom: 4rem;
+}
+
+.spread > * {
+  padding: 1rem 2.4rem;
+}
+
+/* global element styles */
 *, *:after, *:before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+
+@font-face {
+  font-family: "maxwellregular";
+  src: url('../fonts/maxwell_regular-webfont.woff2') format('woff2'),
+       url('../fonts/maxwell_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'maxwelllight';
+  src: url('maxwell_light-webfont.woff2') format('woff2'),
+       url('maxwell_light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'maxwell_boldregular';
+  src: url('maxwell_bold-webfont.woff2') format('woff2'),
+       url('maxwell_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--accent-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "maxwellregular", sans-serif;
+}
+
+body.overflow {
+  overflow-y: scroll;
+  position: fixed;
+}
+
 a {
   text-decoration: none;
+}
+
+p {
+  line-height: 1.7;
 }
 
 li {
   list-style: none;
 }
+
+button {
+  display: inline-block;
+}
+
+/* template styling */
+
+/* modal styling */
+
+.modal {
+  position: fixed;
+  background-color: rgba(0,0,0,0);
+  z-index: 3;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  transition: background-color 0.2s ease;
+}
+
+.modal.open {
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+}
+
+/* main nav */
+.nav {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+.nav__title {
+  font-size: var(--font-size-md);
+}
+
+.nav__title-link {
+  display: block;
+  color: var(--text-light);
+}
+
+.nav__title-link--color {
+  color: var(--text-light);
+}
+
+.nav__list {
+  display: none;
+}
+
+
+.nav__link {
+  color: var(--text-light);
+}
+
+.nav__burger {
+  position: relative;
+  padding: 0.6rem;
+  height: 2rem;
+  width: 3rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.nav__burger:hover {
+  transition: var(--transition-short);
+  background-color: var(--secondary-color);
+}
+
+.nav__burger-middle {
+  height: 0.15rem;
+  position: absolute;
+  width: 70%;
+  border-radius: 2rem;
+  pointer-events: none;
+  background-color: var(--primary-color);
+}
+
+
+.nav__burger-middle:after,
+.nav__burger-middle:before {
+  content: "";
+  position: absolute;
+  height: 0.15rem;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+  pointer-events: none;
+  transform-origin: left center;
+}
+
+.nav__burger-middle:after {
+  bottom: -0.425rem;
+}
+
+.nav__burger-middle:before {
+  bottom: 0.425rem;
+}
+
+/* burger nav animation */
+
+.nav__burger.active:hover {
+  background-color: none;
+}
+
+.nav__burger-middle.active {
+  visibility: hidden;
+}
+
+.nav__burger-middle.active:after,
+.nav__burger-middle.active:before {
+  transition: var(--transition-short);
+  visibility: visible;
+}
+
+.nav__burger-middle.active:before {
+  transform: rotate(45deg);
+  left: 5px;
+  top: -12px;
+}
+.nav__burger-middle.active:after {
+  transform: rotate(-45deg);
+  top: 11px;
+  left: 5px;
+}
+
+/* abstracted mobile nav */
+
+.mobile-nav__list {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 12vh;
+  background-color: var(--text-light);
+  z-index: 3;
+}
+
+.mobile-nav__item {
+  font-size: var(--font-size-sm);
+  transition: var(--transition-short);
+  background-color: var(--text-light);
+  width: 40%;
+  cursor: pointer;
+}
+
+.mobile-nav__item:hover {
+  background-color: #f5f2f0;
+}
+
+.mobile-nav__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 1.5rem;
+  color: var(--inverse-text-color);
+  font-weight: bold;
+}
+
+.mobile-nav__link--icon {
+  font-size: 2em;
+}
+
+/* sidebar nav */
+
+.sidebar-nav__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--primary-color);
+  z-index: 5;
+  text-transform: uppercase;
+  background-color: var(--secondary-color);
+}
+
+.sidebar-nav__list.open {
+  transition: var(--transition-short);
+  width: 50%;
+}
+
+
+.sidebar-nav__item {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 0.4rem 0;
+  pointer-events: none;
+  border-bottom: 1px solid var(--primary-hover);
+  background-color: var(--primary-color);
+}
+
+.sidebar-nav__item:not(:first-child) {
+  flex-direction: column;
+}
+
+.sidebar-nav__item:first-child {
+ align-items: center;
+ flex: 0.8;
+}
+
+.sidebar-nav__item:nth-of-type(3) {
+  flex: 2;
+}
+
+/* Select all nav items except the first one */
+.sidebar-nav__item:not(:first-child):hover {
+  background-color: var(--primary-hover);
+}
+
+/* Social Icons */
+.sidebar-nav__social-link .fab {
+  color: var(--secondary-color);
+  font-size: var(--font-size-md);
+}
+
+.fab--margin {
+  margin-left: 1.2rem;
+}
+
+/* Nav Icons */
+.fa {
+  margin: 0 0.8rem;
+}
+
+.sidebar-nav__social-link {
+  pointer-events: visible;
+  opacity: 0;
+}
+
+
+.sidebar-nav__link,
+.sidebar-nav__dropdown-link {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  pointer-events: visible;
+  color: var(--text-dark);
+  font-size: var(--font-size-sm);
+}
+
+.sidebar-nav__link:hover,
+.sidebar-nav__dropdown-link:hover {
+  color: var(--secondary-color);
+}
+
+.sidebar-nav__link {
+  padding: 1rem 0 1rem 1rem;
+  font-weight: bold;
+}
+
+.sidebar-nav__dropdown-link {
+  padding: 0.4rem 0 0.4rem 2rem;
+}
+
+.sidebar-nav__link.open,
+.sidebar-nav__dropdown-link.open,
+.sidebar-nav__social-link.open {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.3s;
+}
+
+/* footer styling */
+.footer {
+  background-color: var(--accent-color);
+  height: 5.8rem;
+}
+
+.footer__author {
+  text-align: center;
+  color: var(--text-light);
+}
+
+
+.products__logo {
+  height: 16rem;
+  width: 16rem;
+  position: relative;
+  margin: 6rem auto 10rem;
+  text-align: center;
+  border: 12px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+/* beer logos */
+.products__link {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: var(--accent-color)
+}
+
+.products__logo-title {
+  font-size: var(--font-size-lrg);
+  background-color: var(--primary-color);
+  padding: 0.4rem;
+  border-radius: 0 0 0.4rem 0.4rem;
+  text-transform: uppercase;
+  width: 75%;
+  border-radius: var(--border-rad);
+}
+
+.products__logo-desc {
+  width: 75%;
+  padding: 0.4rem;
+  border-radius: var(--border-rad);
+  font-size: var(--font-size-md);
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  z-index: -1;
+}
+
+.products__logo-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.4rem;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: -2;
+}
+
+.products__item {
+  font-size: var(--font-size-md);
+}
+
+.products__item--size {
+  font-size: 0.8em;
+}
+
+.logo--top {
+  margin-top: 5rem;
+}
+

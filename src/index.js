@@ -13,19 +13,30 @@ app.use(express.static("./public"));
 
 //pages
 app.get("/", (req, res) => {
-  res.render("pages/home");
+  res.render("pages/home", {
+    pageTitle: "home"
+  });
 });
+
 app.get("/our-story", (req, res) => {
-  res.render("pages/our-story");
+  res.render("pages/our-story", {
+    pageTitle: "story"
+  });
 });
 app.get("/beers", (req, res) => {
-  res.render("pages/beers");
+  res.render("pages/beers", {
+    pageTitle: "beers"
+  });
 });
 app.get("/contact", (req, res) => {
-  res.render("pages/contact");
+  res.render("pages/contact", {
+    pageTitle: "contact"
+  });
 });
 app.get("/shop", (req, res) => {
-  res.render("pages/shop");
+  res.render("pages/shop", {
+    pageTitle: "shop"
+  });
 });
 
 app.listen(process.env.PORT || 5000, console.log(`Up and running on port ${process.env.PORT}`))

@@ -1,9 +1,11 @@
+import { popupModal } from "./ageVerification.js";
+
 const burgerNav = document.querySelector(".nav__burger-js");
 const sidebarNav = document.querySelector(".sidebar-nav__list-js");
 const sidebarLinks = document.querySelectorAll(".sidebar-nav__link-js");
 const dropdownLinks = document.querySelectorAll(".sidebar-nav__dropdown-link-js");
-const socialLinks = document.querySelectorAll(".sidebar-nav__social-link-js")
-const modal = document.querySelector(".modal-js");
+const socialLinks = document.querySelectorAll(".sidebar-nav__social-link-js");
+
 const toggleBurgerNav = e => {
   // spread each li of element array like object sidebarNav into array
   const link = [...sidebarNav.children];
@@ -13,7 +15,11 @@ const toggleBurgerNav = e => {
   if (e.target === burgerNav) {
     sidebarNav.classList.toggle("open");
     burgerNav.firstElementChild.classList.toggle("active");
-    modal.classList.toggle("open");
+    //check if popup modal exists for that page
+    if (popupModal) {
+      popupModal.classList.toggle("hide");
+    }
+
     document.body.classList.toggle("overflow");
     
     link.forEach( link => {
@@ -32,7 +38,11 @@ const toggleBurgerNav = e => {
     if (sidebarNav.classList.contains("open")) {
       sidebarNav.classList.remove("open");
       burgerNav.firstElementChild.classList.remove("active");
-      modal.classList.remove("open");
+
+      if (popupModal) {
+        popupModal.classList.add("hide");
+      }
+      
       document.body.classList.remove("overflow");
   
       link.forEach( link => {
@@ -48,5 +58,4 @@ const toggleBurgerNav = e => {
   }
 };
 
-document.addEventListener("click", toggleBurgerNav);
-
+export default toggleBurgerNav;

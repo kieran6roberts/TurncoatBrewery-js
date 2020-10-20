@@ -5,21 +5,20 @@
 
 .landing__hero {
   position: relative;
+  height: 70vh;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--accent-color) 85%, var(--primary-color) 100%), url("../images/hero3.jpg") center top/ cover;
+  background-blend-mode: lighten;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
 }
 
-.landing__hero-background {
-  height: 65vh;
-  width: 100%;
-  background: 
-  url("../images/hero.jpg") center center/cover no-repeat,
-  linear-gradient(var(--primary-color), var(--secondary-color));
-  background-blend-mode: screen;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+.landing__logos {
+  display: none;
 }
 
 .landing__header {
   position: absolute;
-  bottom: 0;
+  bottom: 4rem;
   font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
   max-width: 490px;
   pointer-events: none;
@@ -29,6 +28,12 @@
 .landing__cta {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 13vh;
+}
+
+.landing__cta-text {
+  font-size: clamp(var(--font-size-xs), 1.8vw, 1.1rem);
 }
 
 .landing__cta-btns {
@@ -38,18 +43,6 @@
 
 .landing__cta-socials {
   display: none;
-}
-
-.landing__link {
-  display: block;
-  width: 8rem;
-  background-color: var(--primary-color);
-  font-weight: bold;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  transition: background-color 250ms ease,
-              transform 250ms ease;
 }
 
 .landing__welcome {
@@ -62,7 +55,8 @@
 }
 
 .landing__description {
-  background-color: #192630;
+  background-color: var(--dark-hover);
+  text-align: center;
   margin: 0 2rem;
   border-radius: 0.4rem;
 }
@@ -87,28 +81,29 @@
   transform: scale(1.05);
 }
 
-.landing__description {
-  text-align: center;
-  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
-}
-
 /* beer core range styling */
-.products__image {
-  background: linear-gradient(to bottom, var(--primary-color) 30%, var(--secondary-color) 100%);
-  opacity: 0.9;
-  height: 50vh;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
+
+.products__wrapper {
+  padding: 0 2rem;
 }
 
-.products__wrapper{
-  position: relative;
-  padding: 0 2rem;
+.products__image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, var(--accent-color) 70%, var(--secondary-color) 100%), url("../images/hero4.jpg") 100% 100%/ cover;
+  background-blend-mode: lighten;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+  height: 65vh;
+}
+
+.products__logo {
+  margin: 0 auto 4rem;
+  text-align: center;
 }
 
 .products__header {
   font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
   color: var(--text-light);
   max-width: 420px;
-  position: absolute;
-  top: -14rem;
 }

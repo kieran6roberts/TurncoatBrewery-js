@@ -8,13 +8,32 @@
   <%- include ("../template/nav") %>
   <%- include ("../template/abstractedMobileLinks") %>
   <%- include ("../template/sidebar") %>
-
-  <div class="modal modal-js"></div>
-
+  <%- include ("../template/agePopup") %>
   <main>
     <section class="landing">
       <div class="landing__hero spread">
-        <div class="landing__hero-background"></div>
+        <!---
+          <div class="landing__logos">
+            <div class="landing__logo">
+                <div>
+                  <img src="/images/beach.png" class="logo-img" alt="beach landscape">
+                </div>
+                <h5 class="landing__logo-text">pilsner</h5>
+            </div>
+            <div class="landing__logo">
+                <div>
+                  <img src="/images/mountains.png" class="logo-img" alt="snowy mountainous landscape">
+                </div>
+                <h5 class="landing__logo-text">ipa</h5>
+            </div>
+            <div class="landing__logo">
+                <div>
+                  <img src="/images/mountain.png" class="logo-img" alt="mountainous landcape at night">
+                </div>
+                <h5 class="landing__logo-text">stout</h5>
+            </div>
+          </div>
+        -->
         <h1 class="landing__header">
           Come and explore our brand new range of delicious beers
         </h1>
@@ -38,17 +57,17 @@
               </a>
             </div>
               <div class="landing__cta-btns">
-                <a href="/our-story" class="landing__link cta--primary">
-                  Our Story
+                <a href="/beers" class="landing__link cta--primary">
+                  our brews
                 </a>
-                <a href="/beers" class="landing__link cta--secondary">
-                  Our Brews
+                <a href="/shop" class="landing__link cta--secondary">
+                  our shop
                 </a>
               </div>
           </div>
 
           <h2 class="landing__welcome">Welcome To <br>
-            <span class="landing__welcome--lrg">Beer Brewing Co.</span>
+            <span class="landing__welcome--lrg">Turncoat Brewing Co.</span>
           </h2>
           <p class="landing__description">
               the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -59,51 +78,111 @@
     </section>
 
     <section class="products">
-      <div class="products__image"></div>
-      <div class="products__wrapper flow">
+      <div class="products__image spread">
         <h2 class="products__header">
           We think our beer is great. Check it out below!
         </h2>
-        <div class="products__logo logo--top">
-          <a href="/beers" class="products__link">
-            <h4 class="products__logo-title">the palest</h4>
-            <div class="products__logo-img">
-              <img src="/images/beach.png" alt="beach landscape">
-            </div>
-            <h5 class="products__logo-desc">
-              pale ale <br>
-              5%
-            </h5>
+      </div>
+
+      <div class="landing__cta spread">
+        <div class="landing__cta-socials">
+          <h5 class="landing__cta-text">Follow us here:</h5>
+          <a href="/our-story" class="landing__social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="/our-story" class="landing__social-link">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="/our-story" class="landing__social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="/our-story" class="landing__social-link">
+            <i class="fab fa-untappd"></i>
           </a>
         </div>
-        <div class="products__logo logo--middle">
-          <a href="/beers" class="products__link">
-            <h4 class="products__logo-title">iris burn</h4>
-            <div class="products__logo-img">
-              <img src="/images/mountains.png" alt="snowy mountainous landscape">
-            </div>
-            <h5 class="products__logo-desc">
-              ipa <br>
-              6.3%
-            </h5>
-          </a>
+          <div class="landing__cta-btns">
+            <a href="/our-story" class="landing__link cta--primary">
+              to the shop
+            </a>
+            <a href="/beers" class="landing__link cta--secondary">
+              contact us
+            </a>
+          </div>
+      </div>
+
+      <div class="products__wrapper">
+        <div class="products__item">
+          <div class="products__logo logo--top">
+            <a href="/beers" class="products__link">
+              <h4 class="products__logo-title">the best pilsner</h4>
+              <div class="products__logo-img">
+                <img src="/images/beach.png" loading="lazy" alt="beach landscape">
+              </div>
+              <h5 class="products__logo-desc">
+                pilsner <br>
+                4.8%
+              </h5>
+            </a>
+          </div>
+          <div class="products__item-info flow">
+            <h4 class="products__item-title title--clr1">the best pilsner</h4>
+            <p class="products__item-desc">A classic style Pilsner. A blend of German and Aotearoa hops – Mandarina and Motueka.  
+              Gold in colour with citrus fruit notes and a crisp/ dry finish will leave you wanting more.
+            </p>
+            <a href="/beers" class="products__item-link">Learn More</a>
+          </div>
         </div>
+
+        <div class="products__item">
+          <div class="products__logo logo--middle">
+            <a href="/beers" class="products__link">
+              <h4 class="products__logo-title">bitter ipa</h4>
+              <div class="products__logo-img">
+                <img src="/images/mountains.png" loading="lazy" alt="snowy mountainous landscape">
+              </div>
+              <h5 class="products__logo-desc">
+                ipa <br>
+                6.3%
+              </h5>
+            </a>
+          </div>
+          <div class="products__item-info flow">
+            <h4 class="products__item-title title--clr2">bitter ipa</h4>
+            <p class="products__item-desc">Bitterness at its finest! This IPA will punch you in the face with its strong tropical hop flavours 
+              and end with an unmatched bitter finish that is perfectly balanced by the smoothness of the malt.
+            </p>
+            <a href="/beers" class="products__item-link">Learn More</a>
+          </div>
+        </div>
+      
+
+      <div class="products__item">
         <div class="products__logo logo--bottom">
           <a href="/beers" class="products__link">
-            <h4 class="products__logo-title">beekeeper's brew</h4>
+            <h4 class="products__logo-title">smoothest stout</h4>
             <div class="products__logo-img">
-              <img src="/images/mountain.png" alt="mountainous landcape at night">
+              <img src="/images/mountain.png" loading="lazy" alt="mountainous landcape at night">
             </div>
             <h5 class="products__logo-desc">
-              honey stout <br>
+              imperial stout <br>
               9%
             </h5>
           </a>
         </div>
-  
+        <div class="products__item-info flow">
+          <h4 class="products__item-title title--clr3">smoothest stout</h4>
+          <p class="products__item-desc">The smoothest stout will sooth your senses with its richness. 
+            The coffee, chocolate and vanilla flavours will lure you in to an intense but smooth taste and finish with a slight bitterness
+            from the roasted toffee, perfect.
+          </p>
+          <a href="/beers" class="products__item-link">Learn More</a>
+        </div>
+      </div>
+      </div>
       </div>
     </section>
   </main>
+
   <%- include ("../template/footer") %>
   
 </body>

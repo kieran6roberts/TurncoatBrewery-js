@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include ("../template/head") %>
+  <head>
+    <link rel="stylesheet" href="/styles/contact.css">
+    <%- include ("../template/head") %>
 </head>
 <body>
   <%- include ("../template/nav") %>
   <%- include ("../template/abstractedMobileLinks") %>
   <%- include ("../template/sidebar") %>
+  <%- include ("../template/agePopup") %>
+
+  <main>
+    <div class="container">
+      <div class="contact__info flow">
+        <h2 class="contact__title">Contact Us</h2>
+        <p class="contact__note">If you have any queries regarding our beer, brewery, or anything other please see the list of Frequently Asked Questions below.
+          If you can't find what your looking for, use the contact form provided.
+        </p>
+        
+        <h3 class="contact__faqs">FAQ's</h3>
+        
+        <details>
+          <summary>Do you offer tours of the brewery?</summary>
+          Unfortunately at this time we do not offer tours of the brewery. We are currently building our tap room so stay tuned.
+        </details>
+        <details>
+          <summary>Do you offer tours of the brewery?</summary>
+          Unfortunately at this time we do not offer tours of the brewery. We are currently building our tap room so stay tuned.
+        </details>
+        <details>
+          <summary>Do you offer tours of the brewery?</summary>
+          Unfortunately at this time we do not offer tours of the brewery. We are currently building our tap room so stay tuned.
+        </details>
+      </div>
+
+      <form action="" class="contact__form">
+        <div class="input__field">
+          <input type="text" name="input__name" id="input__name" class="contact__input" placeholder="name">
+          <label for="input__name" class="contact__label" data-content="name">
+            <span class="hidden">name</span>
+          </label>
+        </div>
+
+        <div class="input__field">
+          <input type="email" name="input__email" class="contact__input" placeholder="email">
+          <label for="input__email" class="contact__label" data-content="email">
+            <span class="hidden">email</span>
+          </label>
+        </div>
+        <div class="input__field">
+          <input type="text" name="input__subject" class="contact__input" placeholder="subject">
+          <label for="input__subject" class="contact__label" data-content="subject">
+            <span class="hidden">subject</span>
+          </label>
+        </div>
+        <div class="input__field">
+          <textarea name="input__textarea" id="txtarea" cols="30" rows="6" class="contact__input" placeholder="message"></textarea>
+          <label for="textarea" class="contact__label" data-content="message">
+            <span class="hidden">message</span>
+          </label>
+        </div>
+        <div class="input__field">
+          <input type="reset" value="reset" class="contact__btn">
+          <input type="submit" value="submit" class="contact__btn btn--mrg">
+        </div>
+      </form>
+    </div>
+  </main>
   <%- include ("../template/footer") %>
+
   
 </body>
 </html>

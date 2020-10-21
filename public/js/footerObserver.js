@@ -26,6 +26,5 @@ const createObserver = () => {
 
 export {
   footer,
-  abstractedNav,
   createObserver,
 }

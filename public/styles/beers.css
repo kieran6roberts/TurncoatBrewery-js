@@ -13,7 +13,7 @@ main {
   color: var(--text-light);
   font-size: clamp(3.4rem, 4vw + 1rem, 6rem);
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
@@ -24,6 +24,15 @@ main {
 .products__info {
   color: var(--text-light);
   width: 80%;
+}
+
+.products__divider {
+  display: block;
+  width: 80%;
+  height: 1px;
+  padding: 0 2rem;
+  margin: 2rem 0 2rem 2rem;
+  background-color: var(--text-light);
 }
 
 .products__item {

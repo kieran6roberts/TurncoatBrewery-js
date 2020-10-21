@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: center;
     position: static;
-    border-bottom: 2px solid var(--dark-hover);
+    border-bottom: 1px solid var(--primary-color);
     background-color: var(--accent-color);
   }
   
@@ -160,7 +160,7 @@
   .landing__cta {
     justify-content: space-between;
     align-items: center;
-    border-bottom: var(--primary-color);
+    border-bottom: 1px solid var(--text-dark);
   }
 
   .landing__cta-text {
@@ -219,10 +219,6 @@
 
   .products__item {
     flex-direction: row;
-  }
-
-  .products__item-info {
-    width: 70%;
   }
 
   .products__img--sml {

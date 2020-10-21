@@ -62,13 +62,13 @@
 }
 
 .cta--primary {
-  background-color: var(--primary-color);
+  background: linear-gradient(to bottom, var(--primary-color) 50%, var(--primary-hover) 100%);
   color: var(--secondary-color);
 }
 
 .cta--secondary {
   margin-left: 2rem;
-  background-color: var(--secondary-color);
+  background: linear-gradient(to bottom, var(--secondary-color) 50%, var(--secondary-hover) 100%);
   color: var(--primary-color);
 }
 
@@ -106,4 +106,8 @@
   font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
   color: var(--text-light);
   max-width: 420px;
+}
+
+.products__item-info {
+  width: 70%;
 }

@@ -1,0 +1,26 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  text-transform: uppercase;
+}
+
+.error__title {
+  color: var(--text-light);
+  font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
+  margin-bottom: 2rem;
+}
+
+.error__help {
+  color: var(--text-light);
+}
+
+.error__link {
+  color: var(--primary-color);
+}
+
+.error__link:hover {
+  color: var(--primary-hover);
+}

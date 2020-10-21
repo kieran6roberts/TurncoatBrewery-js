@@ -8,13 +8,15 @@
   <%- include ("../template/nav") %>
   <%- include ("../template/abstractedMobileLinks") %>
   <%- include ("../template/sidebar") %>
+  <%- include ("../template/agePopup") %>
   
   <main>
     <section class="core">
-      <h2 class="products__header">core range<span class="products__header sml"> - Available to enjoy year round</span></h2>
+      <h2 class="products__header" id="core-range">core range<span class="products__header sml"> - Available to enjoy year round</span></h2>
       <p class="products__info">There’s a reason for the tried-and-true, perennial styles that make up the heart of our roster: 
         they’re everyday beers that transcend the ‘everyday.’ Never plain, definitely balanced and always drinkable. 
         You know quality when you taste it. Think of these as the 'core with more,' and you’ve hit the mark.</p>
+      <span class="products__divider"></span>
 
       <div class="products__wrapper">
         <div class="products__item">
@@ -25,7 +27,7 @@
             </p>
             <div class="products__img-wrapper">
               <div class="products__logo logo--top">
-                <a href="/beers" class="products__link">
+                <a href="/shop" class="products__link">
                   <h4 class="products__logo-title">the best pilsner</h4>
                   <div class="products__logo-img">
                     <img src="/images/beach.png" loading="lazy" alt="beach landscape">
@@ -57,7 +59,7 @@
               and end with an unmatched bitter finish that is perfectly balanced by the smoothness of the malt.</p>
               <div class="products__img-wrapper">
                 <div class="products__logo logo--middle">
-                  <a href="/beers" class="products__link">
+                  <a href="/shop" class="products__link">
                     <h4 class="products__logo-title">bitter ipa</h4>
                     <div class="products__logo-img">
                       <img src="/images/mountains.png" loading="lazy" alt="snowy mountainous landscape">
@@ -91,7 +93,7 @@
             from the roasted toffee, perfect.</p>
             <div class="products__img-wrapper">
               <div class="products__logo logo--bottom">
-                <a href="/beers" class="products__link">
+                <a href="/shop" class="products__link">
                   <h4 class="products__logo-title">smoothest stout</h4>
                   <div class="products__logo-img">
                     <img src="/images/mountain.png" loading="lazy" alt="mountainous landcape at night">
@@ -118,10 +120,12 @@
         </div>
       </section>
       <section class="seasonal">
-        <h2 class="products__header">seasonal brews<span class="products__header sml"> - Special beers with in seasonal ingredients</span></h2>
+        <h2 class="products__header" id="seasonal-brews">seasonal brews<span class="products__header sml"> - Special beers with in seasonal ingredients</span></h2>
         <p class="products__info">There’s a reason for the tried-and-true, perennial styles that make up the heart of our roster: 
           they’re everyday beers that transcend the ‘everyday.’ Never plain, definitely balanced and always drinkable. 
           You know quality when you taste it. Think of these as the 'core with more,' and you’ve hit the mark.</p>
+
+        <span class="products__divider"></span>
 
           <div class="products__item">
             <div class="products__item-info flow">
@@ -132,7 +136,7 @@
               </p>
               <div class="products__img-wrapper">
                 <div class="products__logo logo--top">
-                  <a href="/beers" class="products__link">
+                  <a href="/shop" class="products__link">
                     <h4 class="products__logo-title">i'm peaking</h4>
                     <div class="products__logo-img">
                       <img src="/images/snow.png" loading="lazy" alt="beach landscape">
@@ -158,10 +162,12 @@
           </div>
       </section>
       <section class="limited">
-        <h2 class="products__header">limited releases<span class="products__header sml"> - One off special brews to catch while you can</span></h2>
+        <h2 class="products__header" id="limited-releases">limited releases<span class="products__header sml"> - One off special brews to catch while you can</span></h2>
         <p class="products__info">These one time only beers allow our brewers to experiment and discover new and exciting flavours
           that we can develop for future recipes. You never quite know what to expect when you open one of these, who dosen't like surprises?
         </p>
+
+        <span class="products__divider"></span>
 
         <div class="products__item">
           <div class="products__item-info flow">
@@ -172,7 +178,7 @@
             </p>
             <div class="products__img-wrapper">
               <div class="products__logo logo--top">
-                <a href="/beers" class="products__link">
+                <a href="/shop" class="products__link">
                   <h4 class="products__logo-title">nature's bite</h4>
                   <div class="products__logo-img">
                     <img src="/images/chili.png" loading="lazy" alt="beach landscape">

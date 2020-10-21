@@ -1,16 +1,22 @@
 import { ageVerification, popupModal, getResultfromStorage } from "./ageVerification.js";
 import toggleBurgerNav from "./burger.js";
-import { createObserver, footer, abstractedNav } from "./footerObserver.js";
+import { createObserver } from "./footerObserver.js";
+import shopInit from "./shop/shopInit.js";
+import { checkoutBtn } from "./shop/removeItemOverlay.js";
 
 const init = () => {
   getResultfromStorage("showModal");
-
-  if (abstractedNav) createObserver();
-  if (popupModal) popupModal.addEventListener("click", ageVerification);
+  createObserver();
 
   document.addEventListener("click", toggleBurgerNav);
+  popupModal.addEventListener("click", ageVerification);
+  
+  if (checkoutBtn) {
+    shopInit();
+  }
 };
 
-init();
+document.addEventListener("DOMContentLoaded", init);
+
 
 

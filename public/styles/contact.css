@@ -26,31 +26,29 @@ main {
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 2rem;
-}
-
-.contact__info {
   color: var(--text-light);
 }
 
 .contact__title {
-  font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
+  font-size: var(--font-header-lg);
   text-transform: uppercase;
 }
 
 .contact__faqs  {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-header-sm);
+  color: var(--text-light);
 }
 
 .contact__faq {
   border-bottom: 1px solid var(--text-light);
   padding: 0.4rem 0.4rem 0;
   text-transform: capitalize;
-  font-size: var(--font-size-sml);
+  font-size: var(--font-p);
 }
 
 .contact__answer {
   text-transform: uppercase;
-  margin: 0.4rem 0.4rem 0;
+  margin: 1rem 0;
   padding: 0.4rem;
 }
 
@@ -61,6 +59,12 @@ main {
 .contact__faq[open] .contact__answer {
   border-bottom: 1px solid var(--text-dark);
   margin-bottom: 0.4rem;
+}
+
+.contact--flex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .contact__form {
@@ -74,7 +78,8 @@ main {
 }
 
 .contact__form-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-header-sm);
+  color: var(--text-dark);
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
@@ -96,10 +101,11 @@ main {
   padding: 0.5rem 1rem;
   border: 2px solid var(--text-dark);
   caret-color: var(--dark-hover);
+  font-size: var(--font-link);
 }
 
-.input__field:hover .contact__input {
-  background-color: var(--light-hover2);
+.contact__input:valid {
+  background-color: greenyellow;
 }
 
 .contact__input::placeholder {
@@ -126,6 +132,7 @@ main {
   border-radius: var(--border-rad);
   text-transform: capitalize;
   background-color: var(--text-light);
+  font-size: var(--font-p);
 }
 
 .contact__label-txt::before {
@@ -176,7 +183,8 @@ main {
 
 .contact__label::before,
 .contact__input:focus + .contact__label::before {
-  transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
+  transform: translate3d(0, -3.4rem, 0) scale3d(0.82, 0.82, 1);
+  color: var(--text-dark);
 }
 
 .contact__label-txt::before,
@@ -188,6 +196,12 @@ main {
   color: var(--dark-hover);
 }
 
+.contact__required {
+  color: var(--text-dark);
+  font-size: var(--font-link);
+  margin-top: 0.4rem;
+}
+
 .contact__btn {
   padding: 0.6rem 1.2rem;
   text-transform: capitalize;
@@ -195,9 +209,15 @@ main {
   border-radius: var(--border-rad);
   cursor: pointer;
   text-transform: uppercase;
+  transition: transform 200ms ease;
+  font-size: var(--font-link);
 }
 
 .btn--mrg {
   margin-left: 1rem;
-  background-color: var(--primary-color);
+  background: linear-gradient(to bottom, var(--primary-color) 50%, var(--primary-hover) 100%);
+}
+
+.contact__btn:hover {
+  transform: scale(1.05);
 }

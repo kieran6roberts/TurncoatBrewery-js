@@ -9,12 +9,13 @@
 
 .error__title {
   color: var(--text-light);
-  font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
+  font-size: var(--font-header-lg);
   margin-bottom: 2rem;
 }
 
 .error__help {
   color: var(--text-light);
+  font-size: var(--font-p);
 }
 
 .error__link {

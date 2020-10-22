@@ -17,13 +17,13 @@
   --transition-long: all 600ms ease;
 
   --primary-font: 'Poppins', sans-serif;
-  --font-size-xxxl: 4rem;
-  --font-size-xxl: 3.4rem;
-  --font-size-xl : 2.4rem;
-  --font-size-lrg: 1.9rem;
-  --font-size-md: 1.5rem;
-  --font-size-sm: 1rem;
-  --font-size-xs: 0.8rem;
+
+  --font-header-lg: clamp(3.5rem, 5.5vw, 10rem);
+  --font-header-md: clamp(3.2rem, 5vw, 9rem);
+  --font-header-sm: clamp(2rem, 3vw, 6.5rem);
+  --font-p: clamp(1rem, 1.3vw, 2.4rem);
+  --font-link: clamp(1rem, 1.2vw, 2rem);
+  --font-btn: clamp(0.9rem, 1.4vw, 2rem);
 
   --border-rad: 0.4rem;
 }
@@ -110,7 +110,7 @@ a {
 
 p {
   line-height: 1.7;
-  font-size: clamp(var(--font-size-xs), 1.8vw, 1rem);
+  font-size: var(--font-p);
 }
 
 li {
@@ -163,7 +163,7 @@ button {
 }
 
 .nav__title {
-  font-size: var(--font-size-sml);
+  font-size: var(--font-link);
 }
 
 .nav__title-link {
@@ -200,7 +200,7 @@ button {
   width: 3rem;
   cursor: pointer;
   border-radius: 0.4rem;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(0,0,0,0.5);
 }
 
 .nav__burger:hover {
@@ -312,7 +312,7 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 1.2rem;
+  padding:  0.6rem 1.2rem;
   color: var(--inverse-text-color);
   font-weight: bold;
 }
@@ -378,7 +378,7 @@ button {
 /* Social Icons */
 .sidebar-nav__social-link .fab {
   color: var(--secondary-color);
-  font-size: var(--font-size-md);
+  font-size: 1.8rem;
 }
 
 .fab--margin {
@@ -397,7 +397,7 @@ button {
   width: 100%;
   opacity: 0;
   color: var(--text-dark);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-p);
 }
 
 .sidebar-nav__link:hover,
@@ -414,11 +414,11 @@ button {
 }
 
 .sidebar-nav__dropdown-link {
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 .sidebar-nav__list.open .sidebar-nav__dropdown-link {
-  padding: 0.8rem 0 0.8rem 1.2rem;
+  padding: 0.8rem 0 0.8rem 0.8rem;
 }
 
 .sidebar-nav__link,
@@ -497,11 +497,12 @@ button {
 }
 
 .popup__title {
-  font-size: var(--font-size-lrg);
+  font-size: var(--font-header-md);
 }
 
 .popup__description {
   margin: 2rem 0;
+  font-size: var(--font-p);
 }
 
 .popup__description--bold {
@@ -509,7 +510,7 @@ button {
 }
 
 .popup__btn {
-  width: 8rem;
+  width: 10rem;
   font-weight: bold;
   padding: 0.5rem 0.75rem;
   border-radius: 0.4rem;
@@ -573,7 +574,7 @@ button {
 }
 
 .products__logo-title {
-  font-size: var(--font-size-lrg);
+  font-size: var(--font-link);
   background-color: var(--primary-color);
   padding: 0.4rem;
   border-radius: 0 0 0.4rem 0.4rem;
@@ -587,7 +588,7 @@ button {
   width: 75%;
   padding: 0.4rem;
   border-radius: var(--border-rad);
-  font-size: var(--font-size-md);
+  font-size: var(--font-link);
   background-color: var(--accent-color);
   color: var(--text-light);
   z-index: 0;
@@ -610,17 +611,17 @@ button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-size: var(--font-size-md);
 }
 
 .products__item-info {
   display: block;
+  width: 100%;
   color: var(--text-light);
   order: -1;
 }
 
 .products__item-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-header-md);
   font-weight: bold;
   background-size: 100%;
   background-repeat: repeat;
@@ -648,14 +649,7 @@ button {
 }
 
 .title--clr5 {
-  background-image: linear-gradient(to bottom, var(--secondary-color) 15%, #40fc1a 100%);
-}
-
-.products__item-img {
-  background-color: var(--text-light);
-  height: 16px;
-  width: 16px;
-  margin-right: 0.4rem;
+  background-image: linear-gradient(to bottom, #1d6e05 15%, #86f870 100%);
 }
 
 .products__item-ingredients span {
@@ -669,8 +663,8 @@ button {
 .landing__link, 
 .products__item-link {
   display: block;
-  width: 6.5rem;
-  font-size: var(--font-size-xs);
+  width: 7rem;
+  font-size: var(--font-btn);
   font-weight: bold;
   padding: 0.5rem 0.75rem;
   border-radius: 0.4rem;

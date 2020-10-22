@@ -1,12 +1,12 @@
-import quantityChangeHandler from "./quantityChangeHandler.js";
-import removeCartItem from "./removeCartItemHandler.js";
-
 //create new item in the cart
 const createCartItem = ( image, title, type, info, price ) => {
-  const cartContainer = document.querySelector(".shop__cart");
+
+  if (!image || !title || !type || !info || !price) {
+    alert("There was a problem adding item to cart. Please try again");
+    return;
+  }
 
   const cartEl = document.createElement("div");
-  cartEl.setAttribute("id", "cart");
   cartEl.classList.add("shop__cart-item");
 
   const cartElHTML = `
@@ -20,9 +20,7 @@ const createCartItem = ( image, title, type, info, price ) => {
   `;
   
   cartEl.innerHTML = cartElHTML;
-  cartContainer.append(cartEl);
-  cartEl.querySelector(".shop__item-btn").addEventListener("click", removeCartItem);
-  cartEl.querySelector(".shop__item-quantity").addEventListener("change", quantityChangeHandler);
+  return cartEl;
 };
 
 export default createCartItem;

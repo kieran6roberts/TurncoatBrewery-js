@@ -3,7 +3,7 @@
 /* small mobile devices and lower */
 @media(max-width: 481px) {
   .landing__header {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-link);
   }
 }
 
@@ -11,11 +11,25 @@
  .shop__item {
    margin: 0 auto;
  }
+
+.sidebar-nav__dropdown-link {
+  font-size: 0.9em;
+  }
+}
+
+/* tablet portrait and upwards */
+@media(min-width: 460px) {
+  .nav__burger {
+    background-color: rgba(255,255,255,0.2);
+  }
 }
 
 /* tablet portrait and upwards */
 @media(min-width: 768px) {
-
+  .landing__link, 
+  .products__item-link {
+    width: 10rem;
+  }
 }
 
 
@@ -27,18 +41,18 @@
 
   .nav {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     position: static;
     border-bottom: 1px solid var(--primary-color);
     background-color: var(--accent-color);
   }
   
   .nav__title {
-    margin: 0 2rem 2rem 0;
-    padding: 0.2rem 3rem;
+    margin: 0.5rem 0;
+    padding: 0.4rem 1.2rem;
     border-radius: var(--border-rad);
     background-color: var(--primary-color);
-    font-size: var(--font-size-md);
+    font-size: var(--font-link);
   }
 
   .nav__list {
@@ -66,6 +80,7 @@
     text-align: center;
     padding: 0.4rem 1.6rem;
     transition: var(--transition-short);
+    font-size: var(--font-link);
   }
 
   .nav__link:before,
@@ -153,7 +168,7 @@
   }
 
   .landing__header {
-    max-width: 55vw;
+    max-width: 50vw;
     position: static;
   }
 
@@ -161,8 +176,9 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--text-dark);
+    font-size: var(--font-link);
   }
-
+  
   .landing__cta-text {
     color: var(--text-light);
   }
@@ -170,7 +186,6 @@
   .landing__cta-socials {
     display: flex;
     align-items: center;
-    font-size: var(--font-size-md);
   }
 
   .landing__social-link {
@@ -189,12 +204,12 @@
   }
 
   .landing__description {
-    max-width: 70vw;
     margin: 0 auto 4rem;
   }
 
   .products__header {
     margin-top: 2rem;
+    max-width: 50vw;
   }
 
   .products__header:nth-child(n + 2) {
@@ -232,6 +247,14 @@
     border-radius: var(--border-rad);
   }
 
+  .products__item-info {
+    width: 70%;
+  }
+
+  .info--stretch {
+    width: 100%;
+  }
+
   .products__item-header {
     text-align: left;
   }
@@ -247,11 +270,15 @@
   
   /*contact*/
   .container {
-    flex-direction: row;
     padding: 2rem;
   }
 
-  .contact__info,
+  .contact--flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .faq__wrapper,
   .contact__form {
     width: 45%;
   }
@@ -272,6 +299,103 @@
 
   .shop__cart-item > :nth-child(6) {
     margin-left: auto;
+  }
+
+  .btn--danger {
+    margin-left: 3rem;
+  }
+}
+
+/* large screens */
+@media(min-width: 1800px) {
+  .flow > * {
+    margin-bottom: 6rem;
+  }
+
+  .nav__title {
+    padding: 1.2rem 2.4rem;
+  }
+    
+  .nav__link {
+    min-width: 300px;
+    padding: 0.8rem 3.2rem;
+  }
+
+  .popup__btn {
+    width: 15rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .landing__description {
+    margin: 0 auto 8rem;
+  }
+
+  .landing__link, 
+  .products__item-link {
+    width: 15rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .products__logo {
+    height: 28rem;
+    width: 28rem;
+    border-width: 24px;
+  }
+
+  .products__logo-title {
+    padding: 1.2rem;
+  }
+
+  .products__info {
+    margin: 4rem 0;
+  }
+
+  .contact__info {
+    flex-direction: row;
+  }
+
+  .contact__answer {
+    margin: 4rem 0;
+  }
+
+  .contact__input {
+    height: 8rem;
+  }
+
+  .contact__label::before,
+  .contact__input:focus + .contact__label::before {
+    transform: translate3d(0, -2rem, 0) scale3d(0.82, 0.82, 1);
+  }
+
+  .input--txt {
+    height: 16rem;
+  }
+
+  .shop__item--grid {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    row-gap: 4rem;
+    padding-top: 4rem;
+  }
+
+  .shop__item {
+    width: 500px;
+    height: 700px;
+    padding: 0.8rem;
+  }
+
+  .shop__item-quantity {
+    width: 6rem;
+    padding: 0.8rem;
+  }
+
+  .shop__item-btn,
+  .btn--danger,
+  .shop__cart-checkout {
+    padding: 0.8rem;
+}
+
+  .shop__cart-item > :nth-child(-n+4) {
+    margin-right: 6rem;
   }
 
 }

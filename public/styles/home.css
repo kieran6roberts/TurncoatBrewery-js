@@ -7,7 +7,7 @@
   position: relative;
   height: 70vh;
   width: 100%;
-  background: linear-gradient(to bottom, var(--accent-color) 85%, var(--primary-color) 100%), url("../images/hero3.jpg") center top/ cover;
+  background: linear-gradient(to bottom, var(--accent-color) 85%, var(--primary-color) 100%), url("../images/hero.jpg") 30% 30%/ cover;
   background-blend-mode: lighten;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
 }
@@ -19,7 +19,7 @@
 .landing__header {
   position: absolute;
   bottom: 4rem;
-  font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
+  font-size: var(--font-header-lg);
   max-width: 490px;
   pointer-events: none;
   z-index: 1;
@@ -33,7 +33,7 @@
 }
 
 .landing__cta-text {
-  font-size: clamp(var(--font-size-xs), 1.8vw, 1.1rem);
+  font-size: var(--font-link);
 }
 
 .landing__cta-btns {
@@ -46,7 +46,7 @@
 }
 
 .landing__welcome {
-  font-size: clamp(1.4rem, 3vw + 0.6rem, 2.4rem);
+  font-size: var(--font-header-sm);
   text-align: center;
 }
 
@@ -56,9 +56,16 @@
 
 .landing__description {
   background-color: var(--dark-hover);
-  text-align: center;
   margin: 0 2rem;
   border-radius: 0.4rem;
+}
+
+.landing__description--link {
+  color: var(--primary-color);
+}
+
+.landing__description--link:hover {
+  color: var(--primary-hover);
 }
 
 .cta--primary {
@@ -103,7 +110,7 @@
 }
 
 .products__header {
-  font-size: clamp(3.2rem, 4vw + 1rem, 6rem);
+  font-size: var(--font-header-md);
   color: var(--text-light);
   max-width: 420px;
 }

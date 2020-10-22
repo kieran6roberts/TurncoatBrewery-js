@@ -11,14 +11,14 @@ main {
 
 .products__header {
   color: var(--text-light);
-  font-size: clamp(3.4rem, 4vw + 1rem, 6rem);
+  font-size: var(--font-header-lg);
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
 .products__header.sml {
-  font-size: var(--font-size-lrg);
+  font-size: 0.5em;
 }
 
 .products__info {
@@ -63,10 +63,12 @@ main {
   border-radius: var(--border-rad);
 }
 
-.products__item-desc {
-  width: 80%;
-}
 
 .products__img--sml {
   display: none;
+}
+
+.products__item-notes {
+  font-size: var(--font-header-sm);
+  text-transform: uppercase;
 }

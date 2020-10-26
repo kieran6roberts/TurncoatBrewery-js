@@ -23,7 +23,6 @@ The aim of this project was to build a full, responsive and fluid site for a fic
 * Jest 26.6.0
 
 ## Setup
-To run this project, install it locally using npm:
+To run this project install npm and create the .env file based on the example. Then run the command:
 
-$ npm init
-$ npm start
+$ npm run dev

@@ -22,19 +22,13 @@ db.once("open", () => console.log("Database connected"));
 app.set("views", path.join(__dirname, "../../views"));
 app.set("view engine", "ejs");
 
-//public folder
-app.use(express.static("./public"));
+//set public static folder
+app.use(express.static("public"));
 
 //pages
 app.get("/", (req, res) => {
-  res.render("pages/home", {
+  res.render("pages/index", {
     pageTitle: "home"
-  });
-});
-
-app.get("/our-story", (req, res) => {
-  res.render("pages/our-story", {
-    pageTitle: "story"
   });
 });
 
@@ -47,12 +41,6 @@ app.get("/beers", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("pages/contact", {
     pageTitle: "contact"
-  });
-});
-
-app.get("/404", (req, res) => {
-  res.render("pages/404", {
-    pageTitle: "404"
   });
 });
 

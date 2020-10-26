@@ -1,3 +1,4 @@
+
 .landing {
   width: 100%;
   color: var(--text-light);
@@ -7,7 +8,7 @@
   position: relative;
   height: 70vh;
   width: 100%;
-  background: linear-gradient(to bottom, var(--accent-color) 85%, var(--primary-color) 100%), url("../images/hero.jpg") 30% 30%/ cover;
+  background: linear-gradient(to bottom, var(--accent-color) 85%, var(--primary-color) 100%), url("../images/hero2000x1333.jpg") 30% 30%/ cover;
   background-blend-mode: lighten;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
 }
@@ -19,7 +20,7 @@
 .landing__header {
   position: absolute;
   bottom: 4rem;
-  font-size: var(--font-header-lg);
+  font-size: var(--font-header-md);
   max-width: 490px;
   pointer-events: none;
   z-index: 1;

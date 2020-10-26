@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
   <link rel="stylesheet" href="/styles/shop.css">
   <%- include ("../template/head") %>
-</head>
 <body>
   <%- include ("../template/nav") %>
   <%- include ("../template/abstractedMobileLinks") %>
@@ -22,7 +20,7 @@
         <button class="shop__cart-checkout">Checkout</button>
         <span class="shop__cart-total"></span>
       </div>
-      
+
       <h2 class="shop__title">Available For Delivery</h2>
       <div class="shop__wrapper">
         <div class="shop__item--grid">
@@ -37,17 +35,17 @@
               <span class="shop__item-name"><%= products[i].name %></span>
               <span class="shop__item-type"><%= products[i].type %></span>
               <span class="shop__item-info"><%= products[i].description %></span>
-              <span class="shop__item-price">$<%= products[i].price %></span>
+              <span class="shop__item-price"><%= products[i].price %></span>
               <button class="shop__item-btn shop__item-btn-js">
                 <a href="#cart" class="btn__link">Add To Cart</a>
               </button>
             </div>
-            <% }; %>
-          </div>
+            <% } %>
+        </div>
         </div>
     </section>
   </main>
   <%- include ("../template/footer") %>
-  
+  <script src="/js/appShop.js" type="module" defer></script>
 </body>
 </html>

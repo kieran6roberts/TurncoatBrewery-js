@@ -2,10 +2,11 @@
   "name": "brewery",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
     "test": "jest --coverage",
-    "devStart": "nodemon src/routes/app.js"
+    "dev": "nodemon src/routes/app.js",
+    "prod": "node dist/src/routes/app.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,6 @@
     "mongoose": "^5.10.4"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.12.1",
     "babel-jest": "^26.6.0",
     "nodemon": "^2.0.4"
   }

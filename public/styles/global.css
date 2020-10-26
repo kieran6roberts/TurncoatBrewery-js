@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "maxwell_regularregular";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: local('Custom Font'),
+   url('../fonts/maxwell_regular-webfont.woff2') format('woff2'),
+   url('../fonts/maxwell_regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+       url('../fonts/poppins-v13-latin-regular.woff2') format('woff2'),
+       url('../fonts/poppins-v13-latin-regular.woff') format('woff'); 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins Bold'), local('Poppins-Bold'),
+       url('../fonts/poppins-v13-latin-700.woff2') format('woff2'),
+       url('../fonts/poppins-v13-latin-700.woff') format('woff');
+  font-display: swap;
+}
+
+
 /* global custom properties */
 :root {
   --primary-color: #fff9bf;
@@ -16,10 +48,11 @@
   --transition-short: all 200ms ease;
   --transition-long: all 600ms ease;
 
-  --primary-font: 'Poppins', sans-serif;
+  --font-primary: "Poppins", sans-serif;
+  --font-headings: "maxwell_regularregular", sans-serif;
 
   --font-header-lg: clamp(3.5rem, 5.5vw, 10rem);
-  --font-header-md: clamp(3.2rem, 5vw, 9rem);
+  --font-header-md: clamp(2.8rem, 5vw, 9rem);
   --font-header-sm: clamp(2rem, 3vw, 6.5rem);
   --font-p: clamp(1rem, 1.3vw, 2.4rem);
   --font-link: clamp(1rem, 1.2vw, 2rem);
@@ -59,43 +92,14 @@
   scroll-behavior: smooth;
 }
 
-
-@font-face {
-  font-family: "maxwellregular";
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: local('Custom Font'),
-   url('../fonts/maxwell_regular-webfont.woff2') format('woff2'),
-   url('../fonts/maxwell_regular-webfont.woff') format('woff');
-}
-/*
-@font-face {
-  font-family: 'maxwelllight';
-  src: url('maxwell_light-webfont.woff2') format('woff2'),
-       url('maxwell_light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'maxwell_boldregular';
-  src: url('maxwell_bold-webfont.woff2') format('woff2'),
-       url('maxwell_bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-*/
-
 body {
-  font-family: var(--primary-font);
+  font-family: var(--font-primary);
   background-color: var(--dark-hover);
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "maxwellregular", sans-serif;
+  font-family: var(--font-headings);
 }
 
 body.overflow {
@@ -186,7 +190,6 @@ button {
 .nav__list {
   display: none;
 }
-
 
 .nav__link {
   color: var(--text-light);
@@ -376,12 +379,12 @@ button {
 }
 
 /* Social Icons */
-.sidebar-nav__social-link .fab {
+.sidebar-nav__social-link .fa {
   color: var(--secondary-color);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
-.fab--margin {
+.fa--margin {
   margin: 0.6rem;
 }
 
@@ -665,12 +668,11 @@ button {
   display: block;
   width: 7rem;
   font-size: var(--font-btn);
-  font-weight: bold;
   padding: 0.5rem 0.75rem;
   border-radius: 0.4rem;
   cursor: pointer;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
   transition: background-color 250ms ease,
               transform 250ms ease;
 }

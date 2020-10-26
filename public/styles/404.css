@@ -11,6 +11,7 @@
   color: var(--text-light);
   font-size: var(--font-header-lg);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .error__help {

@@ -1,12 +1,5 @@
 /* Media Queries For Mobile First Approach */
 
-/* small mobile devices and lower */
-@media(max-width: 481px) {
-  .landing__header {
-    font-size: var(--font-link);
-  }
-}
-
 @media(min-width: 350px) {
  .shop__item {
    margin: 0 auto;

@@ -1,12 +1,15 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import model from "../models/product.js";
+dotenv.config();
 
-mongoose.connect("mongodb://localhost:27017/shopping",  
+mongoose.connect(process.env.DATABASE__URL,  
 {
   useNewUrlParser: true, 
   useUnifiedTopology: true
 });
 
-const Product = require("../models/product");
+const Product = model;
 
 const products = [
   new Product({

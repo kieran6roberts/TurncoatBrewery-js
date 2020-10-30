@@ -1,11 +1,20 @@
-const express = require("express");
-const path = require("path");
-const mongoose = require("mongoose");
-require('dotenv').config();
+import express from "express";
+import path from "path";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import model from "../models/product.js";
+require("regenerator-runtime/runtime");
+dotenv.config();
 
-const Product = require("../models/product");
+import "../../public/styles/home.css";
 
-const app = express();
+const Product = model;
+
+console.log(__dirname);
+
+const app = express(),
+  DIST_DIR = __dirname,
+  EJS_FILE = path.join(DIST_DIR, "index.ejs");
 
 mongoose.connect(process.env.DATABASE_URL,  
 {
@@ -19,13 +28,18 @@ db.on("error", (err) => console.log(err));
 db.once("open", () => console.log("Database connected"));
 
 //ejs view engine
-app.set("views", path.join(__dirname, "../../views"));
+app.set("views", path.join(DIST_DIR, "../../views"));
 app.set("view engine", "ejs");
 
 //set public static folder
-app.use(express.static("public"));
+app.use(express.static(DIST_DIR));
 
 //pages
+
+app.get("*", (req, res) => {
+  res.render(EJS_FILE);
+});
+
 app.get("/", (req, res) => {
   res.render("pages/index", {
     pageTitle: "home"
@@ -62,7 +76,7 @@ app.get("/shop", async (req, res) => {
 });
 
 // error page
-app.use( (req, res, next) => {
+app.use( (req, res) => {
   res.status(404).render("pages/404", {
     pageTitle: "404: Page Not Found",
   });

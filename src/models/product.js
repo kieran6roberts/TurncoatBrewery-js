@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
   imagePath: {type: String, required: true},
@@ -8,4 +8,6 @@ const productSchema = new mongoose.Schema({
   description: {type: String, required: true}
 });
 
-module.exports = mongoose.model("Product", productSchema);
+const model = mongoose.model("Product", productSchema);
+
+export default model;

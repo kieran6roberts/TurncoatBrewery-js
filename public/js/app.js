@@ -2,6 +2,8 @@ import { ageVerification, popupModal, getResultfromStorage } from "./ageVerifica
 import toggleBurgerNav from "./burger.js";
 import { createObserver } from "./footerObserver.js";
 
+import "../styles/home.css";
+
 const init = () => {
   getResultfromStorage("showModal");
   createObserver();

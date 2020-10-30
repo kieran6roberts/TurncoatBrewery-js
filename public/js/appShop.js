@@ -3,6 +3,8 @@ import toggleBurgerNav from "./burger.js";
 import { createObserver } from "./footerObserver.js";
 import shopInit from "./shop/shopInit.js";
 
+import "../styles/home.css";
+
 const init = () => {
   getResultfromStorage("showModal");
   createObserver();

@@ -1,17 +1,14 @@
-import express from "express";
-import path from "path";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import model from "../models/product.js";
-require("regenerator-runtime/runtime");
-dotenv.config();
+const express = require("express");
+const path = require("path");
+const mongoose = require("mongoose");
+const model = require("../models/product.js");
+require("regenerator-runtime/runtime.js");
+require("dotenv").config();
 
 const Product = model;
 
-const app = express(),
-  DIST_DIR = __dirname,
-  EJS_FILE = path.join(DIST_DIR, "index.ejs");
-
+const app = express();
+  
 mongoose.connect(process.env.DATABASE_URL,  
 {
   useNewUrlParser: true, 
@@ -24,17 +21,13 @@ db.on("error", (err) => console.log(err));
 db.once("open", () => console.log("Database connected"));
 
 //ejs view engine
-app.set("views", path.join(DIST_DIR, "../../views"));
+app.set("views", path.join(__dirname, "../../dist/views"));
 app.set("view engine", "ejs");
 
 //set public static folder
-app.use(express.static(DIST_DIR));
+app.use(express.static("./dist"));
 
 //pages
-
-app.get("*", (req, res) => {
-  res.render(EJS_FILE);
-});
 
 app.get("/", (req, res) => {
   res.render("pages/index", {

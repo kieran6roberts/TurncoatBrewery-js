@@ -1,7 +1,6 @@
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import model from "../models/product.js";
-dotenv.config();
+const mongoose = require("mongoose");
+const model = require("../models/product.js");
+require("dotenv").config();
 
 mongoose.connect(process.env.DATABASE__URL,  
 {

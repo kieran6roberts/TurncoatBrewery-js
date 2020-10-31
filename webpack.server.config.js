@@ -16,11 +16,6 @@ module.exports = (env, argv) => {
       filename: '[name].js',
     },
     target: 'node',
-    context: __dirname,
-    node: {
-      __dirname: false,
-      __filename: false,
-    },
     externals: [nodeExternals()],
     module: {
       rules: [

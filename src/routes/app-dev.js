@@ -1,20 +1,13 @@
-import express from "express";
-import path from "path";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import model from "../models/product.js";
+const express = require("express");
+const path = require("path");
+const mongoose = require("mongoose");
+const model = require("../models/product.js");
 require("regenerator-runtime/runtime");
-dotenv.config();
-
-import "../../public/styles/home.css";
+require("dotenv").config();
 
 const Product = model;
 
-console.log(__dirname);
-
-const app = express(),
-  DIST_DIR = __dirname,
-  EJS_FILE = path.join(DIST_DIR, "index.ejs");
+const app = express();
 
 mongoose.connect(process.env.DATABASE_URL,  
 {
@@ -28,17 +21,10 @@ db.on("error", (err) => console.log(err));
 db.once("open", () => console.log("Database connected"));
 
 //ejs view engine
-app.set("views", path.join(DIST_DIR, "../../views"));
+app.set("views", path.join(__dirname, "../../dist/views"));
 app.set("view engine", "ejs");
 
-//set public static folder
-app.use(express.static(DIST_DIR));
-
-//pages
-
-app.get("*", (req, res) => {
-  res.render(EJS_FILE);
-});
+app.use(express.static("./dist"));
 
 app.get("/", (req, res) => {
   res.render("pages/index", {
@@ -68,7 +54,7 @@ app.get("/shop", async (req, res) => {
     });
 
   } catch (err) {
-    res.status(500).render("pages/shop", {
+    res.status(500).render("pages/404", {
       pageTitle: "shop",
       message: err
     });

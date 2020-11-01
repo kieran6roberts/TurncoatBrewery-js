@@ -1,7 +1,8 @@
-import { ageVerification, popupModal, getResultfromStorage } from "./ageVerification.js";
-import toggleBurgerNav from "./burger.js";
-import { createObserver } from "./footerObserver.js";
-import shopInit from "./shop/shopInit.js";
+import { ageVerification, popupModal } from "../storage/ageVerification.js";
+import getResultfromStorage from "../storage/getResultFromStorage";
+import toggleBurgerNav from "../nav/burger.js";
+import { createObserver } from "../footerObserver.js";
+import shopInit from "../shop/shopInit.js";
 
 import "../styles/shop.css";
 import "../styles/global.css";

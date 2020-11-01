@@ -322,8 +322,8 @@ button {
   font-weight: bold;
 }
 
-.mobile-nav__link--icon {
-  font-size: 1.4em;
+.fa.mobile-nav__link--icon {
+  font-size: 1.4em !important;
 }
 
 /* sidebar nav */

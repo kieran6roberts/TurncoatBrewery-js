@@ -42,12 +42,16 @@
     <li class="nav__item">
       <% if (pageTitle === "shop") { %>
           <a href="/shop" class="nav__link active">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fa fa-shopping-cart">
+              <span class="cart-counter cart-counter-js">0</span>
+            </i>
             Shop
           </a>
           <% } else { %>
             <a href="/shop" class="nav__link">
-              <i class="fa fa-shopping-cart"></i>
+              <i class="fa fa-shopping-cart">
+                <span class="cart-counter cart-counter-js">0</span>
+              </i>
               Shop
             </a>
           <% } %>

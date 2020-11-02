@@ -1,5 +1,6 @@
 import updatePrice from "./updatePrice.js";
 import { removeItemOverlay } from "./removeItemOverlay.js";
+import cartCounter from "./cartCounter.js";
 
 // clear cart on ckeckout btn
 const checkoutHandler = e => {
@@ -16,6 +17,7 @@ const checkoutHandler = e => {
 
   shopCartElChildren.forEach( child => child.remove());
   updatePrice();
+  cartCounter();
   alert("Thank you for your purchase");
 };
 

@@ -1,4 +1,4 @@
-import storeResultinStorage from "./storage/storeResultInStorage";
+import storeResultinStorage from "./storeResultInStorage.js";
 
 const acceptBtn = document.querySelector(".btn--accept-js");
 const rejectBtn = document.querySelector(".btn--reject-js");

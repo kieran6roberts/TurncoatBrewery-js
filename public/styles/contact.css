@@ -105,7 +105,7 @@ main {
 }
 
 .contact__input:valid {
-  background-color: greenyellow;
+  background-color: rgba(173, 255, 47, 0.6);
 }
 
 .contact__input::placeholder {

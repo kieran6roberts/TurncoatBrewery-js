@@ -1,13 +1,14 @@
 //create new item in the cart
-const createCartItem = ( image, title, type, info, price ) => {
+const createCartItem = ( image, title, type, info, price, id ) => {
 
-  if (!image || !title || !type || !info || !price) {
+  if (!image || !title || !type || !info || !price || !id) {
     alert("There was a problem adding item to cart. Please try again");
     return;
   }
 
   const cartEl = document.createElement("div");
   cartEl.classList.add("shop__cart-item");
+  cartEl.setAttribute("id", id);
 
   const cartElHTML = `
       <img src=${image} alt="beer" class="shop__item--img">

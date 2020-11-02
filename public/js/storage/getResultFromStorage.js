@@ -1,8 +1,7 @@
-import popupModal from "./ageVerification";
-
 const getResultfromStorage = key => {
-
   const result = JSON.parse(localStorage.getItem(key));
+  
+  const popupModal = document.querySelector(".popup-js");
 
   if (result == null) {
     popupModal.classList.add("show");

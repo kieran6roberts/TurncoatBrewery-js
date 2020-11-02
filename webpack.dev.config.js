@@ -6,11 +6,11 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    home: "./public/js/app.js",
-    shop: "./public/js/appShop.js",
-    beers: "./public/js/appBeers.js",
-    contact: "./public/js/appContact.js",
-    error: "./public/js/app404.js",
+    home: "./public/js/init/app.js",
+    shop: "./public/js/init/appShop.js",
+    beers: "./public/js/init/appBeers.js",
+    contact: "./public/js/init/appContact.js",
+    error: "./public/js/init/app404.js",
   },
   output: {
     path: path.join(__dirname, "dist"),

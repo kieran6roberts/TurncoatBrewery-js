@@ -1,6 +1,8 @@
 import appendItemToCart from "./appendItemToCart.js";
 import createCartItem from "./createCartItem.js";
 import updatePrice from "./updatePrice.js";
+import cartCounter from "./cartCounter.js";
+import cartStorage from "./cartStorage.js";
 
 
 // trigger the add to cart event
@@ -13,16 +15,18 @@ const addToCartHandler = e => {
   const info = clickedItem.querySelector(".shop__item-info").textContent;
   const price = clickedItem.querySelector(".shop__item-price").textContent;
 
-  const cartItem = createCartItem( image, title, type, info, price);
+  const cartItem = createCartItem( image, title, type, info, price, `${title} ${info}`);
 
-  //check if cartItem is undefined and if so don't add item to cart
   if (!cartItem) return;
+
   if (cartItem) {
     const cartContainer = document.querySelector(".shop__cart");
     const overlay = clickedItem.querySelector(".shop__item-overlay");
     overlay.classList.add("added");
     appendItemToCart( cartItem, cartContainer, ".shop__item-btn" , ".shop__item-quantity" );
     updatePrice();
+    cartCounter();
+    cartStorage({ image, title, type, info, price, id: `${title} ${info}` });
   }
 };
 

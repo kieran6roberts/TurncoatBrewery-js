@@ -11,11 +11,11 @@ module.exports = (env, argv) => {
       server: SERVER_PATH
     },
     output: {
-      path: path.join(__dirname, 'dist'),
-      publicPath: '/',
-      filename: '[name].js',
+      path: path.join(__dirname, "dist"),
+      publicPath: "/",
+      filename: "[name].js",
     },
-    target: 'node',
+    target: "node",
     externals: [nodeExternals()],
     module: {
       rules: [

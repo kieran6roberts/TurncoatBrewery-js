@@ -9,7 +9,7 @@ const Product = model;
 
 const app = express();
   
-mongoose.connect(process.env.DATABASE_URL,  
+mongoose.connect("mongodb://localhost:27017/shopping",  
 {
   useNewUrlParser: true, 
   useUnifiedTopology: true

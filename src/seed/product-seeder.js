@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
-const path = require("path");
 const model = require("../models/product.js");
-require("dotenv").config();
 
-mongoose.connect(process.env.DATABASE__URL,  
+mongoose.connect("mongodb://localhost:27017/shopping",  
 {
   useNewUrlParser: true, 
   useUnifiedTopology: true

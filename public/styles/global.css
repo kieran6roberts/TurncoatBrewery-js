@@ -638,7 +638,7 @@ button {
 
 .title--clr1 {
   background-color: var(--text-light);
-  background-image: linear-gradient(to bottom, var(--primary-color) 50%, var(--secondary-color) 100%);
+  background-image: linear-gradient(to bottom, var(--primary-color) 5%, var(--secondary-color) 100%);
 }
 
 .title--clr2 {
@@ -654,7 +654,7 @@ button {
 }
 
 .title--clr5 {
-  background-image: linear-gradient(to bottom, #1d6e05 15%, #86f870 100%);
+  background-image: linear-gradient(to bottom, #31c903 15%, #cbffc1 100%);
 }
 
 .products__item-ingredients span {

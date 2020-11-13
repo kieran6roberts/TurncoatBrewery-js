@@ -3,7 +3,7 @@ const createCartItem = ( image, title, type, info, price, id ) => {
 
   if (!image || !title || !type || !info || !price || !id) {
     alert("There was a problem adding item to cart. Please try again");
-    return;
+    return null;
   }
 
   const cartEl = document.createElement("div");

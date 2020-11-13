@@ -1,13 +1,11 @@
-
 const cartCounter = () => {
   const counter = document.querySelector(".cart-counter-js");
-  const cartItem = document.querySelectorAll(".shop__cart-item");
-  const cartArr = [...cartItem];
+  const cartItems = document.querySelectorAll(".shop__cart-item");
 
-  if (!cartArr) return counter.textContent = 0;
-  counter.textContent = cartArr.length
+  if (!cartItems) return counter.textContent = 0;
 
-  localStorage.setItem("CartCount", JSON.stringify(cartArr.length));
+  localStorage.setItem("CartCount", JSON.stringify([...cartItems].length));
+  counter.textContent = [...cartItems].length;
 }
 
 export default cartCounter;

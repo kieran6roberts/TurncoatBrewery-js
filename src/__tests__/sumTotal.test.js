@@ -1,17 +1,24 @@
+import { screen } from "@testing-library/dom";
+import '@testing-library/jest-dom';
+
 import sumTotal from "../../public/js/shop/sumTotal.js";
 
 describe("Calculate total cart price by removing dollar sign", () => {
   test("sum of the output", () => {
     document.body.innerHTML = `
-    <div class="price" ></div>
-    <div class="quantity" >0</div>
+    <div data-testid="price"></div>
+    <div data-testid="quantity" ></div>
   `;
-  const priceEl = document.querySelector(".price");
+  const priceEl = screen.getByTestId("price");
+  const quantityEl = screen.getByTestId("quantity");
   priceEl.innerText = "$19.99";
-  const quantityEl = document.querySelector(".quantity");
-  quantityEl.value = 0;
+  quantityEl.value = 1;
+  
+  expect(sumTotal(priceEl, quantityEl)).toBe(19.99);
+  
+  priceEl.innerText = "19.99"
+  quantityEl.value = 2;
 
-  expect(sumTotal( priceEl, quantityEl )).toBe(0);
-  expect(sumTotal( priceEl, quantityEl )).not.toBeNaN();
+  expect(sumTotal(priceEl, quantityEl)).toBe(39.98);
   });
 });

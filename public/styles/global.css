@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: "maxwell_regularregular";
   font-weight: normal;
@@ -104,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
 }
 
-body.overflow {
+body.show {
   overflow-y: scroll;
   position: fixed;
   width: 100%;

@@ -1,4 +1,4 @@
-import { popupModal } from "../storage/ageVerification.js";
+import { popupModal } from "../utility/verifyAge.js";
 import sidebarToggle from "./sidebarToggle";
 
 const sidebarNav = document.querySelector(".sidebar-nav__list-js");

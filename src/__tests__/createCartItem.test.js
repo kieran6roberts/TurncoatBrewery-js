@@ -1,30 +1,22 @@
-import createCartItem from "../../public/js/shop/createCartItem";
+import { screen } from "@testing-library/dom";
+import '@testing-library/jest-dom';
 
-describe("Return HTML for new cart item", () => {
-  test("return values", () => {
-    const div = createCartItem("1", "2", "3", "4", "5");
-    const imgEl = div.querySelector(".shop__item--img");
-    const nameEl = div.querySelector(".shop__item-name");
-    const typeEl = div.querySelector(".shop__item-type");
-    const infoEl = div.querySelector(".shop__item-info");
-    const priceEl = div.querySelector(".shop__item-price");
+import createCartItem from "../../public/js/shop/createCartItem.js";
 
-    expect(imgEl.src).toBe("http://localhost/1");
-    expect(nameEl.textContent).toBe("2");
-    expect(typeEl.textContent).toBe("3");
-    expect(infoEl.textContent).toBe("4");
-    expect(priceEl.textContent).toBe("5");
-  });
+jest.spyOn(window, "alert").mockImplementation(() => "error");
 
-  test("check for falsy cases", () => {
-    const jsdomAlert = window.alert;
-    window.alert = () => "alert";
+describe("return built cart item based on props", () => {
+    test("missing props", () => {
+        expect(createCartItem()).toBeNull();
+        expect(window.alert).toHaveBeenCalled();
+    });
 
-    const item = createCartItem();
-    const item2 = createCartItem("", "", "", "", "");
-    expect(item).toBeUndefined();
-    expect(item2).toBeUndefined();
-
-    window.alert = jsdomAlert;
-  });
+    test("return element", () => {
+        const cartEl = createCartItem("img", "title", "type", "info", "price", "id");
+        document.body.append(cartEl);
+        expect(screen.getByText("title")).toBeInTheDocument();
+        expect(screen.getByText("type")).toBeInTheDocument();
+        expect(screen.getByText("info")).toBeInTheDocument();
+        expect(screen.getByText("price")).toBeInTheDocument();
+    });
 });

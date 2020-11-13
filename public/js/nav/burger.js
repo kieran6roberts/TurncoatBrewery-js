@@ -1,28 +1,24 @@
 import { popupModal } from "../utility/verifyAge.js";
-import sidebarToggle from "./sidebarToggle";
+import { sidebarToggle, sidebarNav } from "./sidebarToggle";
+import { toggleClasses } from "../utility/toggleClasses.js";
 
-const sidebarNav = document.querySelector(".sidebar-nav__list-js");
 const burgerNav = document.querySelector(".nav__burger-js");
 
 const toggleBurgerNav = e => {
   if (e.target === sidebarNav) return;
 
-  if (e.target === burgerNav) {
-    document.body.classList.toggle("overflow");
-    burgerNav.firstElementChild.classList.toggle("active");
-    popupModal.classList.toggle("show");
+  if (sidebarNav.classList.contains("show")) {
     sidebarToggle();
-    
-  } else {
-    if (!sidebarNav.classList.contains("open")) return;
-    
-    if (sidebarNav.classList.contains("open")) {
-      document.body.classList.remove("overflow");
-      burgerNav.firstElementChild.classList.remove("active");
-      popupModal.classList.remove("show");
+    toggleClasses("show", document.body,
+                          burgerNav.firstElementChild,
+                          popupModal);
+
+  } else if (e.target === burgerNav) {
       sidebarToggle();
+      toggleClasses("show", document.body,
+                            burgerNav.firstElementChild,
+                            popupModal);
     }
-  }
 };
 
 export default toggleBurgerNav;

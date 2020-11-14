@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include ("../template/head") %>
+</head>
+<body>
+  <%- include ("../template/nav") %>
+  <%- include ("../template/abstractedMobileLinks") %>
+  <%- include ("../template/sidebar") %>
+  <%- include ("../template/agePopup") %>
+
+  <main>
+    <div class="container">
+      <div class="contact__info flow">
+        <h2 class="contact__title">Contact Us</h2>
+        <p class="contact__note">If you have any queries regarding our beer, brewery, or anything other please see the list of Frequently Asked Questions below.
+          If you can't find what your looking for, use the contact form provided.
+        </p>
+      </div>
+
+      <div class="contact--flex flow">
+        <div class="faq__wrapper">
+          <h3 class="contact__faqs">FAQ's</h3>
+            
+          <details class="contact__faq">
+            <summary class="contact__answer">Do you offer tours of the brewery?</summary>
+            Unfortunately at this time we do not offer tours of the brewery. We are currently building our tap room so stay tuned.
+          </details>
+          <details class="contact__faq">
+            <summary class="contact__answer">Are your beers gluten free?</summary>
+            None of our beers are gluten free.
+          </details>
+          <details class="contact__faq">
+            <summary class="contact__answer">What countries are you currently shipping to?</summary>
+            Right now we are only shipping with the United Kingdom.
+          </details>
+          <details class="contact__faq">
+            <summary class="contact__answer">Why don't you ship kegs or bottles?</summary>
+            For now we only sell our beers in 330ml, 440ml or 500ml containers. When the tap room is complete we plan on offering 1L riggers which you
+            can fill up on-site and take home with you.
+          </details>
+
+        </div>
+        <form action="https://formspree.io/f/mbjpoawy" method="POST" class="contact__form">
+          <h5 class="contact__form-title">Enquiries</h5>
+          <div class="input__field">
+            <input type="text" name="name" id="input__name" class="contact__input" placeholder="name" minlength="2" required>
+            <label for="__name" class="contact__label" data-content="* name">
+              <span class="hidden">name</span>
+            </label>
+          </div>
+  
+          <div class="input__field">
+            <input type="email" name="email" class="contact__input" placeholder="email" required>
+            <label for="email" class="contact__label" data-content="* email">
+              <span class="hidden">email</span>
+            </label>
+          </div>
+          <div class="input__field">
+            <input type="text" name="subject" class="contact__input" placeholder="subject" minlength="3" required>
+            <label for="subject" class="contact__label" data-content="* subject">
+              <span class="hidden">subject</span>
+            </label>
+          </div>
+          <div class="input__field">
+            <textarea name="message" 
+            id="txtarea" 
+            cols="30" 
+            rows="6" 
+            class="contact__input input--txt" 
+            placeholder="message" 
+            minlength="30" 
+            spellcheck="false"
+            required></textarea>
+            <label for="message" class="contact__label contact__label-txt" data-content="* message (min 30 characters)">
+              <span class="hidden">message</span>
+            </label>
+          </div>
+          <span class="contact__required">* Required</span>
+          <div class="input__field">
+            <input type="reset" value="reset" class="contact__btn">
+            <input type="submit" value="submit" class="contact__btn btn--mrg">
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </main>
+  <%- include ("../template/footer") %>
+</body>
+</html>

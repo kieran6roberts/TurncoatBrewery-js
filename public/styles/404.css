@@ -1,0 +1,28 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  text-transform: uppercase;
+}
+
+.error__title {
+  color: var(--text-light);
+  font-size: var(--font-header-lg);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.error__help {
+  color: var(--text-light);
+  font-size: var(--font-p);
+}
+
+.error__link {
+  color: var(--primary-color);
+}
+
+.error__link:hover {
+  color: var(--primary-hover);
+}

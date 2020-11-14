@@ -1,0 +1,120 @@
+.landing {
+  width: 100%;
+  color: var(--text-light);
+}
+
+.landing__hero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--accent-color) 85%, var(--primary-color) 100%), url("../images/hero2000x1333.jpg") 30% 30%/ cover;
+  background-blend-mode: lighten;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+}
+
+.landing__logos {
+  display: none;
+}
+
+.landing__header {
+  position: absolute;
+  bottom: 4rem;
+  font-size: var(--font-header-md);
+  max-width: 490px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.landing__cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 13vh;
+}
+
+.landing__cta-text {
+  font-size: var(--font-link);
+}
+
+.landing__cta-btns {
+  display: flex;
+  text-align: center;
+}
+
+.landing__cta-socials {
+  display: none;
+}
+
+.landing__welcome {
+  font-size: var(--font-header-sm);
+  text-align: center;
+}
+
+.landing__welcome--lrg {
+  font-size: 2.8em;
+}
+
+.landing__description {
+  background-color: var(--dark-hover);
+  margin: 0 2rem;
+  border-radius: 0.4rem;
+}
+
+.landing__description--link {
+  color: var(--primary-color);
+}
+
+.landing__description--link:hover {
+  color: var(--primary-hover);
+}
+
+.cta--primary {
+  background: linear-gradient(to bottom, var(--primary-color) 50%, var(--primary-hover) 100%);
+  color: var(--secondary-color);
+}
+
+.cta--secondary {
+  margin-left: 2rem;
+  background: linear-gradient(to bottom, var(--secondary-color) 50%, var(--secondary-hover) 100%);
+  color: var(--primary-color);
+}
+
+.cta--primary:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+.cta--secondary:hover {
+  background-color: var(--secondary-hover);
+  transform: scale(1.05);
+}
+
+/* beer core range styling */
+
+.products__wrapper {
+  padding: 0 2rem;
+}
+
+.products__image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, var(--accent-color) 70%, var(--secondary-color) 100%), url("../images/hero4.jpg") 100% 100%/ cover;
+  background-blend-mode: lighten;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+  height: 65vh;
+}
+
+.products__logo {
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.products__header {
+  font-size: var(--font-header-md);
+  color: var(--text-light);
+  max-width: 420px;
+}
+
+.products__item-info {
+  width: 70%;
+}

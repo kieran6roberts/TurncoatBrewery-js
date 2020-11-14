@@ -8,17 +8,15 @@ const updatePrice = () => {
   
   if (cartItems.length === 0) return totalEl.textContent = "Total: $0";
   
-  else {
     cartItems.forEach( item => {
       const itemPriceEl = item.querySelector(".shop__item-price");
       const quantityEl = item.querySelector(".shop__item-quantity");
   
-      const totalItemPrice = sumTotal( itemPriceEl, quantityEl);
+      const totalItemPrice = sumTotal( itemPriceEl, quantityEl );
       total = total + totalItemPrice;
       total = Math.round(total * "1e2") / "1e2";
     });
     totalEl.textContent = `Total: $${total}`;
-  }
 };
 
 export default updatePrice;

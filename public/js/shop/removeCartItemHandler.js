@@ -1,4 +1,4 @@
-import { removeItemOverlay } from "./removeItemOverlay.js";
+import removeItemOverlay from "./removeItemOverlay.js";
 import updatePrice from "./updatePrice.js";
 import cartCounter from "./cartCounter.js";
 import { getFromStorage, saveToStorage } from "../utility/storage.js";

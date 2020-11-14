@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "private": "true",
+  "jest": {
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
+  },
   "scripts": {
     "start-dev": "node ./src/routes/app-dev.js",
     "start-prod": "node ./src/routes/app-prod.js",

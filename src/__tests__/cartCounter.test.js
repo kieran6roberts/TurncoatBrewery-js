@@ -9,8 +9,8 @@ describe("sum the nubmber of different items in the cart", () => {
         <div data-testid="counter" class="cart-counter-js">0</div>
       `;
       const counter = screen.getByTestId("counter");
-      cartCounter();
-      expect(counter.textContent).toBe("0");
+      expect(cartCounter).toThrow("ensure item has key and value");
+      expect(counter.textContent).toMatch("0");
     });
 
     test("counter content is equal to number of cart items", () => {

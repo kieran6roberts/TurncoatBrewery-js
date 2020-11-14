@@ -1,5 +1,5 @@
 import updatePrice from "./updatePrice.js";
-import { removeItemOverlay } from "./removeItemOverlay.js";
+import removeItemOverlay from "./removeItemOverlay.js";
 import cartCounter from "./cartCounter.js";
 
 // clear cart on ckeckout btn

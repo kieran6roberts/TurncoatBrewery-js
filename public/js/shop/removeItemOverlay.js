@@ -21,7 +21,4 @@ const removeItemOverlay = btn => {
   }
 };
 
-export {
-  removeItemOverlay,
-  checkoutBtn
-};
+export default removeItemOverlay;

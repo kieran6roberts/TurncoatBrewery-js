@@ -62,7 +62,11 @@ module.exports = {
           MiniCssExtractPlugin.loader, 
           {
             loader: "css-loader",
+<<<<<<< HEAD
           },
+=======
+          },/*
+>>>>>>> 753297959a2234f066e18f41aff46214657b26eb
           {
             loader: "postcss-loader",
             options: {
@@ -70,7 +74,11 @@ module.exports = {
                 config: path.join(__dirname, "postcss.config.js")
               }
             }
+<<<<<<< HEAD
           }
+=======
+          }*/
+>>>>>>> 753297959a2234f066e18f41aff46214657b26eb
         ]
       }
     ]

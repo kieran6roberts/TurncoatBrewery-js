@@ -1,4 +1,3 @@
-
 /* poppins-regular - latin */
 @font-face {
   font-family: 'Poppins';
@@ -72,7 +71,11 @@
   --transition-long: all 600ms ease;
 
   --font-primary: "Poppins", sans-serif;
+<<<<<<< HEAD
   --font-headings: "Dosis", sans-serif;
+=======
+  --font-headings: "maxwell_regularregular", sans-serif;
+>>>>>>> 753297959a2234f066e18f41aff46214657b26eb
 
   --font-header-lg: clamp(3.5rem, 5.5vw, 10rem);
   --font-header-md: clamp(2.8rem, 5vw, 9rem);

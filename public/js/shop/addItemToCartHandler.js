@@ -5,8 +5,8 @@ import cartCounter from "./cartCounter.js";
 import cartStorage from "./cartStorage.js";
 
 // trigger the add to cart event
-const addToCartHandler = e => {
-  const clickedItem = e.currentTarget.parentElement;
+const addToCartHandler = ({ currentTarget }) => {
+  const clickedItem = currentTarget.parentElement;
   const image = clickedItem.querySelector(".shop__item--img").src;
   const title = clickedItem.querySelector(".shop__item-name").textContent;
   const type = clickedItem.querySelector(".shop__item-type").textContent;

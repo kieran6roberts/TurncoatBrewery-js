@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const model = require("../models/product.js");
 require("dotenv").config();
 
-mongoose.connect("process.env.DATABASE_URL",  
+mongoose.connect(process.env.DATABASE_URL,  
 {
   useNewUrlParser: true, 
   useUnifiedTopology: true

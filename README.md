@@ -21,8 +21,3 @@ The aim of this project was to build a full, responsive and fluid site for a fic
   * Mongoose 5.10.4
   * EJS 3.1.3
 * Jest 26.6.0
-
-## Setup
-To run this project install npm and create the .env file based on the example. Then run the command:
-
-$ npm run dev

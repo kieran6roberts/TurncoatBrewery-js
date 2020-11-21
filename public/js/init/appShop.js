@@ -8,12 +8,10 @@ import "../../styles/global.css";
 import "../../styles/media.css";
 
 const init = () => {
-  const counter = document.querySelector(".cart-counter-js");
-  counter.textContent =  getFromStorage("CartCount") || 0;
-
+  const counter = document.querySelectorAll(".cart-counter-js");
+  counter.forEach(count => count.textContent = getFromStorage("CartCount") || 0);
   shopInit();
   createObserver();
-
   document.addEventListener("click", toggleBurgerNav);
 };
 

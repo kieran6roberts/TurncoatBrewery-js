@@ -34,7 +34,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
         use: [
           {
-            loader: "file-loader",
+            loaders: "file-loader",
             options: {
               name: "[name].[ext]",
               outputPath: "public/fonts/"
@@ -47,7 +47,7 @@ module.exports = {
         test: /\.(png|jpg)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: ["file-loader", "webp-loader"],
             options: {
              name: "[name].[ext]",
              outputPath: "public/images/"

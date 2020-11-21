@@ -5,16 +5,16 @@ const intersectionHandler = ( entry, observer) => {
   const navChildEls = [...abstractedNav.children];
 
   if (entry[0].isIntersecting) {
-    abstractedNav.classList.add("hide");
+    abstractedNav.classList.add("show");
     navChildEls.forEach( item => {
-      item.classList.add("hide");
+      item.classList.add("show");
     });
   }
 
-  if (!entry[0].isIntersecting && abstractedNav.classList.contains("hide")) {
-    abstractedNav.classList.remove("hide");
+  if (!entry[0].isIntersecting && abstractedNav.classList.contains("show")) {
+    abstractedNav.classList.remove("show");
     navChildEls.forEach( item => {
-      item.classList.remove("hide");
+      item.classList.remove("show");
     });
   }
 };

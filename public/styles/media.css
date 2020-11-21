@@ -24,21 +24,16 @@
     width: 10rem;
   }
 
-  .fa-shopping-cart {
-    position: relative;
-    font-size: var(--font-size-md);
+  .shop__cart-item {
+    flex-direction: row;
   }
 
-  .cart-counter{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 0.75rem;
-    width: 0.75rem;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    font-size: 0.6rem;
+  .shop__cart-item > * {
+    margin-bottom: 0;
+  }
+
+  .fa-shopping-cart {
+    font-size: var(--font-size-md);
   }
 }
 

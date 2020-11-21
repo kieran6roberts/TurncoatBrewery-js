@@ -9,10 +9,10 @@ import "../../styles/global.css";
 import "../../styles/media.css";
 
 const init = () => {
-  const counter = document.querySelector(".cart-counter-js");
   const popupModal = document.querySelector(".popup-js");
-
-  counter.textContent =  getFromStorage("CartCount") || 0;
+  const counter = document.querySelectorAll(".cart-counter-js");
+  counter.forEach(count => count.textContent = getFromStorage("CartCount") || 0);
+  const nav = document.querySelector(".nav");
 
   const verified = getFromStorage("AgeVerification");
   const time = new Date().getTime();
@@ -20,6 +20,7 @@ const init = () => {
   if (verified == null || time > verified.expiry) {
     localStorage.removeItem("AgeVerification");
     toggleClasses("show", 
+                    nav,
                     popupModal, 
                     popupModal.firstElementChild, 
                     document.body);

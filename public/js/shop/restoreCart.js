@@ -5,10 +5,10 @@ import { getFromStorage, saveToStorage } from "../utility/storage.js";
 const restoreCart = () => {
   const shopItems = document.querySelectorAll(".shop__item");
   const cartContainer = document.querySelector(".shop__cart");
-  const counter = document.querySelector(".cart-counter-js");
+  const counter = document.querySelectorAll(".cart-counter-js");
 
   const storedItems = getFromStorage("CartItems");
-  counter.textContent =  getFromStorage("CartCount") || 0;
+  counter.forEach(count => count.textContent = getFromStorage("CartCount") || 0);
 
   if (!storedItems) return saveToStorage("CartItems", []);
 
@@ -23,7 +23,7 @@ const restoreCart = () => {
 
     [...shopItems].forEach( item => {
       // add overlay to item if it is already in the cart
-      if (storedIds.includes(item.id)) item.firstElementChild.classList.add("show");
+      if (storedIds.includes(item.id)) item.firstElementChild.classList.add("overlay");
     });
   }
 };

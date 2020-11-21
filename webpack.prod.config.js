@@ -45,7 +45,7 @@ module.exports = {
         ],
       },
       {
-       test: /\.(png|jpg)$/,
+       test: /\.(png|jpg|webp)$/,
        use: [
          {
            loader: "file-loader",
@@ -62,11 +62,7 @@ module.exports = {
           MiniCssExtractPlugin.loader, 
           {
             loader: "css-loader",
-<<<<<<< HEAD
           },
-=======
-          },/*
->>>>>>> 753297959a2234f066e18f41aff46214657b26eb
           {
             loader: "postcss-loader",
             options: {
@@ -74,11 +70,7 @@ module.exports = {
                 config: path.join(__dirname, "postcss.config.js")
               }
             }
-<<<<<<< HEAD
           }
-=======
-          }*/
->>>>>>> 753297959a2234f066e18f41aff46214657b26eb
         ]
       }
     ]
@@ -115,7 +107,7 @@ module.exports = {
       scriptLoading: "defer"
     }),
     new MiniCssExtractPlugin({
-      filename: "public/styles/[name].css",
+      filename: "public/styles/[name].[contenthash].css",
       chunkFilename: "[id].[contenthash].css",
     }),
     new CopyPlugin({

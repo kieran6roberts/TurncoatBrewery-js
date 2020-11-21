@@ -10,7 +10,7 @@ const removeCartItemHandler = ({ currentTarget }) => {
   const items = getFromStorage("CartItems");
   const newItems = items.filter( item => item.id !== currentTarget.parentElement.id);
 
-  saveToStorage("CartItems", newItems);
+  saveToStorage("CartItems", newItems, null);
   updatePrice();
   cartCounter();
 };

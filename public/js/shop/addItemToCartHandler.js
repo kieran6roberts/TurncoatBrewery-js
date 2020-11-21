@@ -22,7 +22,7 @@ const addToCartHandler = ({ currentTarget }) => {
     else {
       const cartContainer = document.querySelector(".shop__cart");
       const overlay = clickedItem.querySelector(".shop__item-overlay");
-      overlay.classList.add("show");
+      overlay.classList.add("overlay");
       appendItemToCart( cartItem, cartContainer, ".shop__item-btn" , ".shop__item-quantity" );
       updatePrice();
       cartCounter();

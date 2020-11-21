@@ -4,11 +4,13 @@ import { toggleClasses } from "./toggleClasses.js";
 const acceptBtn = document.querySelector(".btn--accept-js");
 const rejectBtn = document.querySelector(".btn--reject-js");
 const popup = document.querySelector(".popup-js");
+const nav = document.querySelector(".nav");
 
 const verifyAgeHandler = e => {
   switch (e.target) {
     case acceptBtn: 
       toggleClasses("show", 
+                    nav,
                     popup, 
                     popup.firstElementChild, 
                     document.body);

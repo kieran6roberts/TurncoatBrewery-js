@@ -71,16 +71,12 @@
   --transition-long: all 600ms ease;
 
   --font-primary: "Poppins", sans-serif;
-<<<<<<< HEAD
   --font-headings: "Dosis", sans-serif;
-=======
-  --font-headings: "maxwell_regularregular", sans-serif;
->>>>>>> 753297959a2234f066e18f41aff46214657b26eb
 
   --font-header-lg: clamp(3.5rem, 5.5vw, 10rem);
   --font-header-md: clamp(2.8rem, 5vw, 9rem);
   --font-header-sm: clamp(2rem, 3vw, 6.5rem);
-  --font-p: clamp(1rem, 1.3vw, 2.4rem);
+  --font-p: clamp(0.9rem, 1.3vw, 2.4rem);
   --font-link: clamp(1rem, 1.2vw, 2rem);
   --font-btn: clamp(0.9rem, 1.4vw, 2rem);
 
@@ -192,6 +188,11 @@ button {
   z-index: 5;
 }
 
+.nav.show {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .nav__title {
   font-size: var(--font-link);
 }
@@ -277,21 +278,36 @@ button {
   visibility: hidden;
 }
 
-.nav__burger-middle.active:after,
-.nav__burger-middle.active:before {
+.nav__burger-middle.show:after,
+.nav__burger-middle.show:before {
   transition: var(--transition-short);
   visibility: visible;
 }
 
-.nav__burger-middle.active:before {
+.nav__burger-middle.show:before {
   transform: rotate(45deg);
   left: 5px;
   top: -12px;
 }
-.nav__burger-middle.active:after {
+.nav__burger-middle.show:after {
   transform: rotate(-45deg);
   top: 11px;
   left: 5px;
+}
+
+.cart-counter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  font-size: 0.6rem;
 }
 
 /* abstracted mobile nav */
@@ -350,6 +366,10 @@ button {
   font-size: 1.4em !important;
 }
 
+.fa-shopping-cart {
+  position: relative;
+}
+
 /* sidebar nav */
 
 .sidebar-nav__list {
@@ -386,7 +406,7 @@ button {
 }
 
 .sidebar-nav__item:not(:first-child) > * {
-  margin-left: 1rem;
+  padding-left: 1rem;
 }
 
 .sidebar-nav__item:first-child {
@@ -440,6 +460,7 @@ button {
 
 .sidebar-nav__link {
   font-weight: bold;
+  padding: 3rem 0;
 }
 
 .sidebar-nav__dropdown-link {
@@ -494,7 +515,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 3;
   background-color: rgba(0,0,0,0.8);
   visibility: visible;
   display: none;
@@ -526,7 +547,7 @@ button {
 }
 
 .popup__title {
-  font-size: var(--font-header-md);
+  font-size: var(--font-header-sm);
 }
 
 .popup__description {
@@ -692,7 +713,7 @@ button {
 .landing__link, 
 .products__item-link {
   display: block;
-  width: 7rem;
+  width: 8rem;
   font-size: var(--font-btn);
   padding: 0.5rem 0.75rem;
   border-radius: 0.4rem;

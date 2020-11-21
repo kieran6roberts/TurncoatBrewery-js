@@ -107,15 +107,19 @@ body {
 
 .shop__cart-item {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   font-size: var(--font-p);
-  padding: 1rem 0;
+  margin: 2rem 0;
+  padding: 0.4rem;
+  border: 2px solid var(--text-dark);
+  border-radius: var(--border-rad);
 }
 
-.shop__cart-item {
-  margin: 2rem 0;
+.shop__cart-item > * {
+  margin-bottom: 0.5rem;
 }
 
 .shop__cart-divider {
@@ -155,8 +159,7 @@ body {
   transition: var(--transition-short);
 }
 
-/* item was added to cart */
-.show {
+.overlay {
   display: flex;
   justify-content: center;
   align-items: center;

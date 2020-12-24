@@ -71,4 +71,8 @@ main {
 .products__item-notes {
   font-size: var(--font-header-sm);
   text-transform: uppercase;
+  font-style: italic;
+}
+.products__item-note {
+  font-style: italic;
 }

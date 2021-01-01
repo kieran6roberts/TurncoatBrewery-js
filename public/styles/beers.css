@@ -13,26 +13,29 @@ main {
   color: var(--text-light);
   font-size: var(--font-header-lg);
   font-weight: bold;
+  text-align: center;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .products__header.sml {
-  font-size: 0.5em;
+  font-size: 0.3em;
 }
 
 .products__info {
   color: var(--text-light);
+  margin: 0 auto;
+  text-align: center;
   width: 80%;
 }
 
 .products__divider {
-  display: block;
-  width: 80%;
-  height: 1px;
-  padding: 0 2rem;
-  margin: 2rem 0 2rem 2rem;
   background-color: var(--text-light);
+  display: block;
+  height: 1px;
+  margin: 2rem auto 2rem;
+  padding: 0 2rem;
+  width: 80%;
 }
 
 .products__item {

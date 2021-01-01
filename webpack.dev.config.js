@@ -17,8 +17,8 @@ module.exports = {
     publicPath: "/",
     filename: "public/js/[name].js",
   },
-  target: 'web',
-  devtool: 'source-map',
+  target: "web",
+  devtool: "source-map",
     module: {
     rules: [
       {
@@ -34,7 +34,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
         use: [
           {
-            loaders: "file-loader",
+            loader: "file-loader",
             options: {
               name: "[name].[ext]",
               outputPath: "public/fonts/"
@@ -44,10 +44,10 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|webp)$/,
         use: [
           {
-            loader: ["file-loader", "webp-loader"],
+            loader: "file-loader",
             options: {
              name: "[name].[ext]",
              outputPath: "public/images/"
@@ -100,8 +100,8 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        {from:'public/images',to:'public/images'},
-        {from:'views/template',to:'views/template'},
+        {from: "public/images", to: "public/images"},
+        {from: "views/template", to: "views/template"},
       ]
     }),
     new CleanWebpackPlugin()

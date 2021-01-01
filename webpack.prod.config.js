@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -112,16 +112,16 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        {from:'public/images',to:'public/images'},
-        {from:'views/template',to:'views/template'},
+        {from: "public/images", to: "public/images"},
+        {from: "views/template", to: "views/template"},
       ]
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.optimize\.css$/g,
-      cssProcessor: require('cssnano'),
+      cssProcessor: require("cssnano"),
       cssProcessorPluginOptions: {
         preset: [
-          'default', 
+          "default", 
           { discardComments: 
             { removeAll: true } 
           }

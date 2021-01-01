@@ -7,8 +7,8 @@
   position: relative;
   height: 70vh;
   width: 100%;
-  background: linear-gradient(to bottom, var(--accent-color) 75%, var(--primary-color) 100%), url("../images/hero2000x1333.jpg") 30% 30%/ cover;
-  background-blend-mode: lighten;
+  background: linear-gradient(to top, var(--secondary-color) 0%, var(--accent-color) 50%), url("../images/hero.webp") 30% 30%/ cover;
+  background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
 }
 
@@ -101,10 +101,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: linear-gradient(to bottom, var(--accent-color) 70%, var(--secondary-color) 100%), url("../images/hero4.jpg") 100% 100%/ cover;
-  background-blend-mode: lighten;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-  height: 65vh;
+  background: url("../images/home-beer.webp") 50% 100%/ cover;
+  height: 50vh;
 }
 
 .products__logo {
@@ -112,11 +110,11 @@
   text-align: center;
 }
 
-.products__header {
+.products__title {
   font-size: var(--font-header-md);
   color: var(--text-light);
   text-shadow: 1px 1px 1px var(--text-dark);
-  max-width: 420px;
+  max-width: 700px;
 }
 
 .products__item-info {

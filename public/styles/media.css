@@ -213,7 +213,7 @@
   }
 
   .products__header {
-    margin-top: 2rem;
+    margin: 2rem auto 0.5rem;
     max-width: 50vw;
   }
 
@@ -231,10 +231,6 @@
 
   .products__logo {
     margin: 0;
-  }
-
-  .products__image {
-    clip-path: none;
   }
 
   .products__item {

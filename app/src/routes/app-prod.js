@@ -21,7 +21,7 @@ db.on("error", (err) => console.log(err));
 db.once("open", () => console.log("Database connected"));
 
 //ejs view engine
-app.set("views", path.join(__dirname, "../../dist/views"));
+app.set("views", path.join(__dirname, "../../../dist/views"));
 app.set("view engine", "ejs");
 
 //set public static folder
@@ -71,4 +71,4 @@ app.use( (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 5000, console.log(`Up and running on port ${process.env.PORT}`))
+app.listen(process.env.PORT || 5000);

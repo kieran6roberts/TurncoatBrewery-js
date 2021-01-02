@@ -1,1 +1,1 @@
-web: npm run start-prod
+web: node app/src/routes/app-prod.js

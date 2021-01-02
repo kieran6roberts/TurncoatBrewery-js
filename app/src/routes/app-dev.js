@@ -68,4 +68,4 @@ app.use( (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 5000, console.log(`Up and running on port ${process.env.PORT}`))
+app.listen(process.env.PORT || 5000);

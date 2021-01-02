@@ -1,4 +1,4 @@
-import { saveToStorage, getFromStorage } from "../../public/js/utility/storage.js";
+import { saveToStorage, getFromStorage } from "../../../public/js/utility/storage.js";
 
 beforeEach( () => {
   Object.defineProperty(window, "localStorage", {

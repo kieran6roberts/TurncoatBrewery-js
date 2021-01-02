@@ -3,8 +3,8 @@ const nodeExternals = require("webpack-node-externals");
 
 module.exports = (env, argv) => {
   const SERVER_PATH = (argv.mode === "production") ?
-  "./src/routes/app-prod.js" :
-  "./src/routes/app-dev.js"
+  "./app/src/routes/app-prod.js" :
+  "./app/src/routes/app-dev.js"
 
   return ({
     entry: {

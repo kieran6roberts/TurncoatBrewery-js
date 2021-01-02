@@ -27,19 +27,18 @@ The aim of this project was to build a full, responsive and fluid site for a fic
 
 ## Getting Started
 
-First clone the repo to your machine and install the project dependencies using
+For this project you will need to install node.js and mongodb on your machine. First clone the repo to your machine and install the project dependencies using
 ```
 npm install
 ```
-Then you will need to setup cloud storage for the store products. For this project I went with mongodb cloud available here ().
+Then you will need to setup cloud storage for the store products. For this project I went with [mongodb cloud](https://www.mongodb.com/cloud).
 
-Setup your cluster, then when ready you can populate the cluster by running the command 
+First setup your cluster and then when ready connect it to the app by creating the `.env` file using the `.env.example` provided. 
+In order to populate the cluster with products run the command
 ```
-node app/seed/product-seeder.js
+npm run seeder
 ```
-this will populate your cluster with the brewery products.
 
-Finally create a `.env` file at the root of the project using the `.env.example` file to connect the project to the cloud db.
 To build and run the app use
 ```
 npm run build-prod && npm run start-prod

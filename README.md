@@ -1,4 +1,4 @@
-# Turncoat Brewery - Mock Brewery Site
+# ARCHIVED (Outdated) - Turncoat Brewery - Mock Brewery Site
 
 This is a site built for a mock brewery and includes a home, products and contact pages as well as a small e-commerce store. The client-side of the app is built using vanilla JS and CSS while the server-side code uses Node.js to build a simple express server and connect to mongoose which stores my products.
 
